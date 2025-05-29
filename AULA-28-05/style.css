@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    width: 100vw;
+    background-color: rgb(198, 247, 193);
+    height: 40vh;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: start;
+    flex-direction: co;
+}
+.body{
+    width: 100vw;
+    background-color: aquamarine; 
+    height: 40vh;
+
+}
+.test{
+    width: 2vw;
+    height: 2vh;
+    border: solid 4px black;
+}
