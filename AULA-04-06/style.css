@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo{
+    margin-left: 2vw;
+}
+#nav{
+    display: flex;
+    gap: 4vw;
+}
+#getQuote{
+    margin-right: 2vw;
+}
+#getQuote button{
+    width: 10vw;
+    height: 6vh;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: bold;
+    color: rgb(99, 96, 96);
+}
+.oisom{
+    height: 13vh;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oisom:hover{
+    background-color: orangered;
+    transition: 1s;
+    
+}
+.oisom:hover a{
+    color: white;
+}
+#Logistics{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#imgHero img{
+width: 100vw;
+height: 90vh;
+filter: brightness(20%);
+}
+#tittle{
+    position: absolute;
+    width: 40vw;
+    text-align: center;
+}
+#tittle h3{
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+}
+#tittle{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+}
+#tracking{
+    margin-top: 5vh;
+}
+#tracking input{
+    width: 23vw;
+    height: 6vh;
+    padding: auto;
+    outline: none;
+}
+#tracking input::placeholder{
+padding-left: 20px;
+}
+#tracking button{
+    height: 6vh;
+    width: 9vw;
+    margin-left: -14px;
+    background-color: orangered;
+    border:none;
+    color: white;
+    cursor: pointer;
+}
