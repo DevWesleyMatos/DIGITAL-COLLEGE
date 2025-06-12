@@ -1,101 +1,194 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-#header{
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#logo{
-    margin-left: 2vw;
+#logo {
+  margin-left: 2vw;
 }
-#nav{
-    display: flex;
-    gap: 4vw;
+#nav {
+  display: flex;
+  gap: 4vw;
 }
-#getQuote{
-    margin-right: 2vw;
+#getQuote {
+  margin-right: 2vw;
 }
-#getQuote button{
-    width: 10vw;
+#getQuote button {
+  width: 10vw;
+  height: 6vh;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: bold;
+  color: rgb(99, 96, 96);
+}
+.oisom {
+  height: 13vh;
+  width: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oisom:hover {
+  background-color: orangered;
+  transition: 1s;
+}
+.oisom:hover a {
+  color: white;
+}
+#Logistics {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#imgHero img {
+  width: 100vw;
+  height: 90vh;
+  filter: brightness(20%);
+}
+#tittle {
+  position: absolute;
+  width: 40vw;
+  text-align: center;
+}
+#tittle h3 {
+  color: orangered;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+#tittle {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+}
+#tracking {
+  margin-top: 5vh;
+}
+#tracking input {
+  width: 23vw;
+  height: 6vh;
+  padding: auto;
+  outline: none;
+}
+#tracking input::placeholder {
+  padding-left: 20px;
+}
+#tracking button {
+  height: 6vh;
+  width: 9vw;
+  margin-left: -14px;
+  background-color: orangered;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#requestAFreeQuote {
+  margin-top: 8vh;
+  width: 100vw;
+  height: 50vh;
+  background-color: #eaeaeb;
+}
+#freeQuoteContainers {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#titleContainer h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: orangered;
+  font-size: 14px;
+}
+
+#titleContainer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+#titleContainer p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 14px;
+  padding: 2vh 2vw 2vh 0;
+  text-align: justify;
+}
+#informations {
+  display: flex;
+  gap: 6vw;
+}
+
+.numbers {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: orangered;
+}
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+}
+#divEsquerda {
+  width: 40vw;
+  height: 50vh;
+  padding-top: 10vh;
+}
+#divDireita {
+  width: 40vw;
+  height: 50vh;
+  background-color: orangered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#divDireita input{
+    width: 25vw;
     height: 6vh;
-    background-color: orangered;
-    color: white;
+    margin-bottom: 3vh;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-a{
-    text-decoration: none;
-    font-family: Roboto;
-    font-weight: bold;
-    color: rgb(99, 96, 96);
-}
-.oisom{
-    height: 13vh;
-    width: 6vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.oisom:hover{
-    background-color: orangered;
-    transition: 1s;
-    
-}
-.oisom:hover a{
-    color: white;
-}
-#Logistics{
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-#imgHero img{
-width: 100vw;
-height: 90vh;
-filter: brightness(20%);
-}
-#tittle{
-    position: absolute;
-    width: 40vw;
-    text-align: center;
-}
-#tittle h3{
-    color: orangered;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-}
-#tittle{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 42px;
-    font-weight: 900;
-}
-#tracking{
-    margin-top: 5vh;
-}
-#tracking input{
-    width: 23vw;
-    height: 6vh;
-    padding: auto;
     outline: none;
 }
-#tracking input::placeholder{
-padding-left: 20px;
+#divDireita ::placeholder{
+    padding-left: 2vw;
 }
-#tracking button{
+#divDireita select{
+    width: 25vw;
     height: 6vh;
-    width: 9vw;
-    margin-left: -14px;
-    background-color: orangered;
-    border:none;
+    margin-bottom: 3vh;
+    padding-left: 2vw;
+    border: none;
+    outline: none;
+    color: grey;
+    cursor: pointer;
+}
+#divDireita button{
+    width: 25vw;
+    height: 7.5vh;
+    margin-bottom: 3vh;
+    border: none;
+    outline: none;
+    background-color: #1F1F2E;
     color: white;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
 }
