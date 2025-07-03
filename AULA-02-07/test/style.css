@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+}
+
+
+
+
+@media (min-width:300px) and (max-width:499px) {
+   .a{
+    background-color: red;
+   }
+   .b{
+    display: none;
+   }
+   .c{
+    display: none;
+   }
+
+}
+@media (min-width:500px) and (max-width:799px) {
+    .b{
+    background-color: yellowgreen;
+    }
+     .a{
+    display: none;
+   }
+    .c{
+    display: none;
+   }
+}
+@media (min-width:800px) and (max-width:999px) {
+    .c{
+    background-color: aqua;
+    }
+     .ba{
+    display: none;
+   }
+    .b{
+    display: none;
+   }
+}

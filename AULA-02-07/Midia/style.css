@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+@media(min-width:300px) and (max-width:600px){
+    section{
+        width: 100vw;
+        height: 10vh;
+    }
+    #Formulario{
+        background-color: #BBBBF3;
+        padding: 1vw;
+        width: 100vw;
+        height: 80vh;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: 60vh; 
+        margin: 8vh 9vw;
+        background-color: white;
+        font-size: x-small;
+        border-radius: 8px;
+    }
+    #titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3vw;
+    }
+    #titulo img{
+        width: 30vw;
+    }
+    #formTitulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1vw;
+        margin-bottom: 3vh;
+        color: #474747;
+    }
+    #conteudo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-bottom: 5vh;
+        gap: 2vh;
+    }
+    #conteudo label{
+        color:#4D4D4D;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    #conteudo input[type="text"]{
+        width: 70vw;
+        height: 3vh;
+        font-size: 8px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #F8F8F8;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        padding: 1vw;
+    }
+    #iconLogin img{
+        width: 5vw;
+        
+        margin-bottom: 3vh;
+    }
+    #bnt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #bnt button{
+        background-color: #C92071;
+        border: none;
+        color: white;
+        width: 52vw;
+        height: 8vh;
+    }
+    #iconlogin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+       
+}
