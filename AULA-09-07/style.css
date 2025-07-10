@@ -1,0 +1,26 @@
+nav{
+    width: 100vw;
+    height: 15vh;
+    background-color: white !important;
+    margin-top: 3vh;
+}
+.carousel-inner{
+    width: 100vw;
+    height: 60vh !important;
+    margin: 10vh 0 !important; 
+}
+
+.imgCarrosel{
+    width: 100vw;
+    height: 70vh; 
+}
+.img_logo{
+width: 150px;
+height: 18vh;
+margin-left: 50vw;
+}
+#cardBox{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+}
