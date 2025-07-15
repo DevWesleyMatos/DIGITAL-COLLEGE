@@ -1,26 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 nav{
     width: 100vw;
     height: 15vh;
-    background-color: white !important;
-    margin-top: 3vh;
 }
-.carousel-inner{
-    width: 100vw;
-    height: 60vh !important;
-    margin: 10vh 0 !important; 
+#imgLogo{
+    width: 7vw;
+    height: 15vh;
 }
-
-.imgCarrosel{
-    width: 100vw;
-    height: 70vh; 
-}
-.img_logo{
-width: 150px;
-height: 18vh;
-margin-left: 50vw;
-}
-#cardBox{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10vh;
+.carousel-item img {
+  object-fit: contain;
 }
