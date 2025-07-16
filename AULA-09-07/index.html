@@ -1,175 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    
-    <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark w-100 p-1 ">
-  <div class="container-fluid">
-    <img src="./img/logo.png" alt="" class="img-fluid" id="imgLogo">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark w-100 p-1 ">
+    <div class="container-fluid">
+      <img src="./img/logo.png" alt="" class="img-fluid" id="imgLogo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contato</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Lugar 1</a></li>
+              <li><a class="dropdown-item" href="#">Lugar 2</a></li>
+              <li><a class="dropdown-item" href="#">lugar 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-white" aria-disabled="true">Sobre</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 border-0" type="search" placeholder="Pesquisar" aria-label="Search" />
+          <button class="btn btn-outline-success bg-secondary text-light border-0" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CARROSSEL -->
+  <div id="carouselExampleAutoplaying" class="carousel slide w-100 h-100" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active d-flex justify-content-center">
+        <img src="../AULA-09-07/img/campo.jpg" class="d-block w-100" alt="Imagem da China" />
+      </div>
+      <div class="carousel-item">
+        <img src="../AULA-09-07/img/rua.jpg" class="d-block w-100" alt="Imagem da Espanha" />
+      </div>
+      <div class="carousel-item">
+        <img src="../AULA-09-07/img/italia.jpg" class="d-block w-100" alt="Imagem da Itália" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 " >
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Contato</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Opções
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Lugar 1</a></li>
-            <li><a class="dropdown-item" href="#">Lugar 2</a></li>
-            <li><a class="dropdown-item" href="#">lugar 3</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled text-white" aria-disabled="true">Sobre</a>
-        </li>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- CARDS -->
+  <div id="cardBox" class="container my-5 d-flex justify-content-around flex-wrap gap-4">
+    <div class="card" style="width: 18rem;">
+      <img src="https://picsum.photos/400/400?random=1" class="card-img-top" alt="Imagem exemplo" />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2 border-0" type="search" placeholder="Pesquisar" aria-label="Search"/>
-        <button class="btn btn-outline-success bg-secondary text-light border-0" type="submit">Pesquisar</button>
-      </form>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="https://picsum.photos/400/400?random=2" class="card-img-top" alt="Imagem exemplo" />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="https://picsum.photos/400/400?random=3" class="card-img-top" alt="Imagem exemplo" />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
     </div>
   </div>
-</nav>
 
-    <!-- CARROSSEL -->
-    <div
-      id="carouselExampleAutoplaying"
-      class="carousel slide w-100 h-100"
-      data-bs-ride="carousel"
+  <div class="container-fluid bg-body-secondary">
 
-    >
-      <div class="carousel-inner ">
-        <div class="carousel-item active d-flex justify-content-center">
-          <img
-            src="../AULA-09-07/img/campo.jpg"
-            class="d-block w-100"
-            alt="Imagem da China"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="../AULA-09-07/img/rua.jpg"
-            class="d-block w-100"
-            alt="Imagem da Espanha"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="../AULA-09-07/img/italia.jpg"
-            class="d-block w-100"
-            alt="Imagem da Itália"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <div class="container me-2 col-5 ">
+
+    <div class="input-group m-3 p-5">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+        aria-describedby="basic-addon1">
     </div>
 
-    <!-- CARDS -->
-    <div id="cardBox" class="container my-5 d-flex justify-content-around flex-wrap gap-4">
-      <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/400/400?random=1" class="card-img-top" alt="Imagem exemplo" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card’s content.
-          </p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/400/400?random=2" class="card-img-top" alt="Imagem exemplo" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card’s content.
-          </p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/400/400?random=3" class="card-img-top" alt="Imagem exemplo" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card’s content.
-          </p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Recipient’s username" aria-label="Recipient’s username"
+        aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2">@example.com</span>
     </div>
 
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Your vanity URL</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+      </div>
+      <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <span class="input-group-text">.00</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-text">With textarea</span>
+      <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+
+  </div>
+
+  <div class="col-7"></div>
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
