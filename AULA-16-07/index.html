@@ -7,14 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"></script>
 </head>
-<body>
-    <form action="">
-        <input id="button" type="button" value="butão" onclick="test()">
+<body onload="alert('Terminou de carregar')">
+     <form action="">
+        <input id="button" type="button" value="butão" onclick="Calculadora()">
     </form>
 
+<div id="geral">
+        <div id="a"> <button onclick="mudarCor()">test</button></div>
+        <div id="b" onmouseout="tirarMouse()" onmouseover="moverMouse()"></div>
+        <div id="c"></div>
+</div>
+
+<div>
+    <input type="text" value="digite algo" id="entrada" onfocus="limpaText()">
+</div>
+
+
     <script type="text/javascript">
-    var idade = prompt("Qual sua idade: ");
-    alert("Você tem " + idade + " anos de idade");
+    
+        function Calculadora()    
+        { 
+        let idade = prompt("Qual sua idade: ");
+        const ano = 365
+        return alert(`vc tem ${idade} e já viveu ${idade*ano} dias de vida aaaaaaaaaaeeeeeeeeeeee`);
+        }
+
+
    </script>
 </body>
 </html>

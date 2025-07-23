@@ -1,0 +1,22 @@
+#geral{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 100vw;
+    margin-top: 10vh;
+    
+}
+div{
+    width: 30vw;
+    height: 30vh;
+
+}
+#a{
+    background-color: aqua;
+}
+#b{
+    background-color: violet;
+}
+#c{
+    background-color: chartreuse;
+}

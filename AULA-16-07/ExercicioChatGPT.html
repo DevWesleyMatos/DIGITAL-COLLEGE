@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #testDiv{
+        width: 5rem;
+        height: 5rem;
+        background-color: yellowgreen;
+        margin: 5vw;
+    }
+    div{
+        margin: 5rem;
+    }
+</style>
+<body>
+    
+    
+<!-- 1. Clique no botão
+Crie um botão que, ao ser clicado, exiba um alerta com a mensagem "Botão clicado!". -->
+<div>
+<button onclick="cliclado()">Clicado</button>
+</div>
+<script>
+    function cliclado(){
+     alert('Botão clicado!')
+        }
+</script>
+
+<!-- <2. Mudar cor da div ao passar o mouse
+Crie uma div com cor vermelha que mude para azul quando o mouse passar por cima dela. -->
+
+<div id="testDiv" onmouseover="moverMouse()" onmouseout="tirarMouse()">
+
+</div>
+<script>
+    function moverMouse(){
+        document.getElementById("testDiv").style.background ="red"
+    }
+    function tirarMouse(){
+        document.getElementById("testDiv").style.background ="yellowgreen"
+    }
+
+</script>
+
+<!-- 3. Mostrar valor do input
+Crie um campo de texto e um botão. Quando o botão for clicado, exiba o que foi digitado no input. -->
+
+<div>
+
+    <input type="text" placeholder="Digite seu nome..." id="entrada">
+    <button onclick="Enter()">Enter</button>
+
+</div>
+  <script>
+        function Enter(){
+            
+           let texto = document.getElementById("entrada").value
+           alert(`Meu nome é ${texto}`)
+        }
+    </script>
+
+    <!-- 4. Soma simples
+Crie uma função chamada somar que receba dois números e retorne a soma deles. -->
+
+<div>
+    <input type="number" name="" id="number1" placeholder="Digite um numero">
+    <input type="number" name="" id="number2" placeholder="Digite um numero">
+    <button onclick="calcular()">Calcular</button>
+</div>
+<script>
+    function calcular(){
+        let valor1 = Number(document.getElementById("number1").value)
+        let valor2 = Number(document.getElementById("number2").value)
+        let resultado = valor1 + valor2
+        alert(`A soma dos Valores é ${resultado}`)
+    }
+</script>
+
+<!-- 5. Verificar se é maior de idade
+Crie uma função que receba a idade de uma pessoa e retorne a string "Maior de idade" ou "Menor de idade". -->
+
+<!-- 6. Converter Celsius para Fahrenheit
+Crie uma função que receba um valor em Celsius e retorne o equivalente em Fahrenheit.
+(Fórmula: F = C * 9/5 + 32) -->
+
+<!-- 7. Criar objeto pessoa
+Crie um objeto chamado pessoa com as propriedades nome, idade e profissão. Depois, exiba esses valores. -->
+
+<!-- 8. Adicionar método ao objeto
+Crie um objeto chamado carro com marca e modelo. Adicione um método que exiba essas informações no console. -->
+
+<!-- 9. Alterar valor de uma propriedade
+Crie um objeto livro com as propriedades titulo e paginas. Em seguida, altere o número de páginas para outro valor e mostre no console. -->
+
+</body>
+</html>

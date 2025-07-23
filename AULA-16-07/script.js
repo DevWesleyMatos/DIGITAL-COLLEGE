@@ -23,3 +23,21 @@ function test() {
     let a = 
     alert(a + "kjsnknakcasnc")
 }
+
+function mudarCor(){
+    return document.getElementById("a").style.backgroundColor="red"
+}
+
+function moverMouse(){
+    let bJS = document.getElementById("b")
+    bJS.style.backgroundColor ="yellow"
+}
+
+function tirarMouse(){
+    let bJS = document.getElementById("b")
+    bJS.style.backgroundColor ="violet"
+}
+
+function limpaText(){
+    document.getElementById("entrada").value ="Complete a Frase"
+}
