@@ -22,6 +22,7 @@
 <!-- 1. Clique no botão
 Crie um botão que, ao ser clicado, exiba um alerta com a mensagem "Botão clicado!". -->
 <div>
+    <h1>Clique no botão</h1>
 <button onclick="cliclado()">Clicado</button>
 </div>
 <script>
@@ -32,7 +33,7 @@ Crie um botão que, ao ser clicado, exiba um alerta com a mensagem "Botão clica
 
 <!-- <2. Mudar cor da div ao passar o mouse
 Crie uma div com cor vermelha que mude para azul quando o mouse passar por cima dela. -->
-
+ <h1>Mudar cor da div ao passar o mouse</h1>
 <div id="testDiv" onmouseover="moverMouse()" onmouseout="tirarMouse()">
 
 </div>
@@ -50,6 +51,7 @@ Crie uma div com cor vermelha que mude para azul quando o mouse passar por cima 
 Crie um campo de texto e um botão. Quando o botão for clicado, exiba o que foi digitado no input. -->
 
 <div>
+    <h1>Mostrar valor do input</h1>
 
     <input type="text" placeholder="Digite seu nome..." id="entrada">
     <button onclick="Enter()">Enter</button>
@@ -67,6 +69,7 @@ Crie um campo de texto e um botão. Quando o botão for clicado, exiba o que foi
 Crie uma função chamada somar que receba dois números e retorne a soma deles. -->
 
 <div>
+    <h1> Soma simples</h1>
     <input type="number" name="" id="number1" placeholder="Digite um numero">
     <input type="number" name="" id="number2" placeholder="Digite um numero">
     <button onclick="calcular()">Calcular</button>
@@ -83,15 +86,80 @@ Crie uma função chamada somar que receba dois números e retorne a soma deles.
 <!-- 5. Verificar se é maior de idade
 Crie uma função que receba a idade de uma pessoa e retorne a string "Maior de idade" ou "Menor de idade". -->
 
+<div>
+    <h1>Verificar se é maior de idade</h1>
+    <input type="number" placeholder="Digite sua idade..." id="idade">
+    <button onclick="verificarIdade()">Verificar</button>
+</div>
+<script>
+    function verificarIdade(){
+        let valorIdade = Number(document.getElementById("idade").value)
+        if (valorIdade >= 18){
+            alert(`Vc é maior de idade`)
+        }else{
+            alert(`Vc é menor de idade`)
+        }
+    }
+</script>
+
 <!-- 6. Converter Celsius para Fahrenheit
 Crie uma função que receba um valor em Celsius e retorne o equivalente em Fahrenheit.
 (Fórmula: F = C * 9/5 + 32) -->
 
+<div>
+    <h1>Converter Celsius para Fahrenheit</h1>
+    <input type="number" placeholder="Digite o grau..." id="grau">
+    <button onclick="converter()"> converter</button>
+</div>
+<script>
+    function converter(){
+        let valorGrau = Number(document.getElementById("grau").value)
+        Fah = valorGrau * (9/5) + 32
+        alert(`valor em Fahrenheit é ${Fah}`)
+    }
+</script>
+
 <!-- 7. Criar objeto pessoa
 Crie um objeto chamado pessoa com as propriedades nome, idade e profissão. Depois, exiba esses valores. -->
 
+<div>
+    <h1>Criar objeto pessoa</h1>
+    <input type="text" name="" id="meuNome" placeholder="Digite seu nome...">
+    <input type="text" name="" id="prof" placeholder="Digite sua profissão">
+    <input type="text" name="" id="setor" placeholder="Digite seu setor">
+    <button onclick="exibir()">Exibir</button>
+</div>
+<script>
+    function exibir(){
+        
+        let valorPessoa = {nome:document.getElementById("meuNome").value,profissao:document.getElementById("prof").value,setor:document.getElementById("setor").value }
+        alert(`Meu nome é ${valorPessoa.nome}, Minha Profissão é ${valorPessoa.profissao} e trabalho no setor ${valorPessoa.setor}`)
+
+    }
+</script>
+
 <!-- 8. Adicionar método ao objeto
 Crie um objeto chamado carro com marca e modelo. Adicione um método que exiba essas informações no console. -->
+
+<div>
+    <h1>Adicionar método ao objeto</h1>
+    <input type="text" name="" id="carro" placeholder="Digite o nome do carro">
+    <input type="text" name="" id="modelo" placeholder="Digite o modelo">
+    <input type="text" name="" id="marca" placeholder="Digite marca">
+    <button onclick="StatusCarro()">Status Carro</button>
+</div>
+
+<script>
+    function StatusCarro(){
+        let valorCarro = {
+            nomeCarro:document.getElementById("carro").value,
+            modelo:document.getElementById("modelo").value,
+            marca:document.getElementById("marca").value
+        }
+        alert(`Confira o Console`)
+        console.log(`Carro é ${valorCarro.nomeCarro}, o modelo é ${valorCarro.modelo} e marca é ${valorCarro.marca}`)
+    }
+</script>
 
 <!-- 9. Alterar valor de uma propriedade
 Crie um objeto livro com as propriedades titulo e paginas. Em seguida, altere o número de páginas para outro valor e mostre no console. -->
