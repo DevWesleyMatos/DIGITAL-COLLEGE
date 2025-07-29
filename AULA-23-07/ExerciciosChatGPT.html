@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    div{
+        margin: 10vw auto;
+    }
+</style>
 <body>
 
-<!-- 1. Listar nomes em uma lista (ul)
-Crie um array com nomes. Exiba cada nome como um <li> dentro de uma <ul> na tela, usando JavaScript para gerar os elementos dinamicamente. -->
+<div>
+   <h1> 1. Listar nomes em uma lista (ul)</h1>
+<!--Crie um array com nomes. Exiba cada nome como um <li> dentro de uma <ul> na tela, usando JavaScript para gerar os elementos dinamicamente. -->
 
-    <div>
+    
         <input type="text" id="lista">
         <button onclick="Adicionar()">Adicionar</button>
         <ul id="mostrarLista"></ul>
@@ -44,6 +50,7 @@ Cada botão deve chamar uma função diferente.
 Mostre o resultado no HTML (sem usar alert). -->
 
 <div>
+    <h1>2. Calculadora com 4 operações</h1>
     <input type="number" id="valor1" placeholder="Digite uma valor...">
     <input type="number" id="valor2" placeholder="Digite uma valor...">
     <select name="" id="seleciona" >
@@ -86,6 +93,48 @@ Permita ao usuário digitar nome e idade.
 Ao clicar em "Cadastrar", salve esses dados em um array de objetos:
 [{nome: "Ana", idade: 22}, {...}]
 Depois, mostre todos os cadastros na tela. -->
+
+<div>
+    <h1>3. Cadastro de usuários com array de objetos</h1>
+
+    <input type="text" placeholder="Digite seu Nome" id="cdtNome">
+    <input type="text" placeholder="Digite sua Idade" id="cdtIdade">
+    <input type="text" placeholder="Digite sua Cidade" id="cdtCidade">
+    <button onclick="cadastrar()">cadastrar</button>
+    <ul id="listPessoa"></ul>
+</div>
+
+<script>
+    let user=[]
+
+    function cadastrar(){
+        let Nome = document.getElementById("cdtNome").value
+        let Idade = document.getElementById("cdtIdade").value
+        let Cidade = document.getElementById("cdtCidade").value
+
+        if(Nome !== "" && Idade !== "" && Cidade !== ""){
+            let novaPessoa = {
+                Nome:Nome,
+                Idade: Number(Idade), 
+                Cidade: Cidade
+
+            }
+            user.push(novaPessoa)
+
+            let li =document.createElement("li")
+            li.textContent = `Nome: ${novaPessoa.Nome} | Idade: ${novaPessoa.Idade} | Cidade: ${novaPessoa.Cidade}` 
+            document.getElementById("listPessoa").appendChild(li)
+            limpar()
+
+
+        }else{
+            alert(`Valores Incorretos!`)
+        }
+        function limpar(){
+            cdtNome.value=""
+        }
+    }
+</script>
 
 <!-- 4. Média de notas com array
 Crie 3 inputs para o usuário digitar 3 notas.
