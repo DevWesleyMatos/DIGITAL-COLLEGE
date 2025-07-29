@@ -13,37 +13,40 @@
 
 // Qual universidade brasileira está localizada em Recife? -->
 
-    <div>
-        
-        <button onclick="procurarJapao()">procura cidade mais antiga do Japão</button>
-    </div>
-    
+<div>
+  <button onclick="procurarJapao()">Procurar cidade mais antiga do Japão</button>
+</div>
 
-    <script>
-        const universidades = [
-  [
-    ["USP", "São Paulo", 1934],
-    ["UFPE", "Recife", 1946]
-  ],
-  [
-    ["Harvard", "Cambridge", 1636],
-    ["MIT", "Cambridge", 1861]
-  ],
-  [ japao,
-    ["Universidade de Tóquio", "Tóquio", 1877],
-    ["Universidade de Kyoto", "Kyoto", 1897]
-  ]
-];
-function procurarJapao(){
-    let position = universidades.find(
-        function(universidades){
-            return 
-    })
-}
+<script>
+  const universidades = [
+    [
+      ["USP", "São Paulo", 1934],
+      ["UFPE", "Recife", 1946]
+    ],
+    [
+      ["Harvard", "Cambridge", 1636],
+      ["MIT", "Cambridge", 1861]
+    ],
+    [
+      ["Universidade de Tóquio", "Tóquio", 1877],
+      ["Universidade de Kyoto", "Kyoto", 1897]
+    ]
+  ];
 
+  function procurarJapao() {
+    // A terceira posição do array é o grupo do Japão
+    const universidadesJapao = universidades[2];
 
+    // Encontrar a universidade com o menor ano (mais antiga)
+    let maisAntiga = universidadesJapao.reduce((maisAntiga, atual) => {
+      return atual[2] < maisAntiga[2] ? atual : maisAntiga;
+    });
 
-    </script>
+    // Exibir o nome da cidade da universidade mais antiga
+    alert("A cidade mais antiga do Japão é: " + maisAntiga[1]);
+  }
+</script>
+
 
 </body>
 </html>

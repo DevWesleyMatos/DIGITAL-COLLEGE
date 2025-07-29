@@ -163,6 +163,23 @@ Crie um objeto chamado carro com marca e modelo. Adicione um método que exiba e
 
 <!-- 9. Alterar valor de uma propriedade
 Crie um objeto livro com as propriedades titulo e paginas. Em seguida, altere o número de páginas para outro valor e mostre no console. -->
+<div>
+    <h1>Alterar valor de uma propriedade</h1>
+    <input type="text" placeholder="Digite o numero da pagina atual..." id="pagina">
+    <button onclick="mudarPagina()">Mudar pagina</button>
+    <input type="text" id="paginaFinal">
+</div>
+<script>
+    let livro = {nome:'bale', pagina:document.getElementById("pagina").value}
+
+function mudarPagina(){
+    livro.pagina = prompt(`Digite a nova pagina`)
+    console.log(livro.pagina)
+    alert(`sua pagina agora é ${livro.pagina}`)
+    document.getElementById("paginaFinal").value = livro.pagina
+
+}
+</script>
 
 </body>
 </html>
