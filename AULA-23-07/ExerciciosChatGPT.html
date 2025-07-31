@@ -1,173 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    div{
-        margin: 10vw auto;
+  </head>
+  <style>
+    div {
+      margin: 10vw auto;
     }
-</style>
-<body>
+  </style>
+  <body>
+    <div>
+      <h1>1. Listar nomes em uma lista (ul)</h1>
+      <!--Crie um array com nomes. Exiba cada nome como um <li> dentro de uma <ul> na tela, usando JavaScript para gerar os elementos dinamicamente. -->
 
-<div>
-   <h1> 1. Listar nomes em uma lista (ul)</h1>
-<!--Crie um array com nomes. Exiba cada nome como um <li> dentro de uma <ul> na tela, usando JavaScript para gerar os elementos dinamicamente. -->
-
-    
-        <input type="text" id="lista">
-        <button onclick="Adicionar()">Adicionar</button>
-        <ul id="mostrarLista"></ul>
+      <input type="text" id="lista" />
+      <button onclick="Adicionar()">Adicionar</button>
+      <ul id="mostrarLista"></ul>
     </div>
-    <script>            
-        
-        let itens =[]
-        
-        function Adicionar(){
+    <script>
+      let itens = [];
 
-                let lista = document.getElementById("lista")
-                let Valorlista = lista.value
+      function Adicionar() {
+        let lista = document.getElementById("lista");
+        let Valorlista = lista.value;
 
-                if(Valorlista !== "" && Valorlista !== null && Valorlista !== undefined){
-                itens.push(Valorlista)
-                let ul=document.getElementById("mostrarLista")
-                let li=document.createElement("li")
-                li.textContent = Valorlista
-                ul.appendChild(li)
-                lista.value=""
-            }
+        if (
+          Valorlista !== "" &&
+          Valorlista !== null &&
+          Valorlista !== undefined
+        ) {
+          itens.push(Valorlista);
+          let ul = document.getElementById("mostrarLista");
+          let li = document.createElement("li");
+          li.textContent = Valorlista;
+          ul.appendChild(li);
+          lista.value = "";
         }
+      }
     </script>
 
-
-
-<!-- 
+    <!-- 
  2. Calculadora com 4 operações
 Crie dois inputs numéricos e botões para: Somar, Subtrair, Multiplicar e Dividir.
 Cada botão deve chamar uma função diferente.
 Mostre o resultado no HTML (sem usar alert). -->
 
-<div>
-    <h1>2. Calculadora com 4 operações</h1>
-    <input type="number" id="valor1" placeholder="Digite uma valor...">
-    <input type="number" id="valor2" placeholder="Digite uma valor...">
-    <select name="" id="seleciona" >
+    <div>
+      <h1>2. Calculadora com 4 operações</h1>
+      <input type="number" id="valor1" placeholder="Digite uma valor..." />
+      <input type="number" id="valor2" placeholder="Digite uma valor..." />
+      <select name="" id="seleciona">
         <option value="">Selecione</option>
-        <option value="soma" >Soma</option>
-        <option value="subtrair" >Subtração</option>
+        <option value="soma">Soma</option>
+        <option value="subtrair">Subtração</option>
         <option value=""></option>
-    </select>
-    <button onclick="verificar()">Verificar</button>
-    
-    <input type="text" id="mostrarvalor">
-    
-</div>
+      </select>
+      <button onclick="verificar()">Verificar</button>
+
+      <input type="text" id="mostrarvalor" />
+    </div>
 
     <script>
-        function verificar(){
-            let valor1 = Number(document.getElementById("valor1").value)
-            let valor2 = Number(document.getElementById("valor2").value)
-            let seleciona = document.getElementById("seleciona").value
-            let mostrarvalor = document.getElementById("mostrarvalor")
-            let resultado
+      function verificar() {
+        let valor1 = Number(document.getElementById("valor1").value);
+        let valor2 = Number(document.getElementById("valor2").value);
+        let seleciona = document.getElementById("seleciona").value;
+        let mostrarvalor = document.getElementById("mostrarvalor");
+        let resultado;
 
-           if(seleciona === "soma"){
-            resultado = valor1 + valor2
-            
-           }else if(seleciona === "subtrair"){
-            resultado = valor1 - valor2
-           }
-           
-           else{
-            alert(`Valores invalidos`)
-           }
-           mostrarvalor.value = "Resultado é: " + resultado
+        if (seleciona === "soma") {
+          resultado = valor1 + valor2;
+        } else if (seleciona === "subtrair") {
+          resultado = valor1 - valor2;
+        } else {
+          alert(`Valores invalidos`);
         }
+        mostrarvalor.value = "Resultado é: " + resultado;
+      }
     </script>
 
-
-<!-- 3. Cadastro de usuários com array de objetos
+    <!-- 3. Cadastro de usuários com array de objetos
 Permita ao usuário digitar nome e idade.
 Ao clicar em "Cadastrar", salve esses dados em um array de objetos:
 [{nome: "Ana", idade: 22}, {...}]
 Depois, mostre todos os cadastros na tela. -->
 
-<div>
-    <h1>3. Cadastro de usuários com array de objetos</h1>
+    <div>
+      <h1>3. Cadastro de usuários com array de objetos</h1>
 
-    <input type="text" placeholder="Digite seu Nome" id="cdtNome">
-    <input type="text" placeholder="Digite sua Idade" id="cdtIdade">
-    <input type="text" placeholder="Digite sua Cidade" id="cdtCidade">
-    <button onclick="cadastrar()">cadastrar</button>
-    <ul id="listPessoa"></ul>
-</div>
+      <input type="text" placeholder="Digite seu Nome" id="cdtNome" />
+      <input type="text" placeholder="Digite sua Idade" id="cdtIdade" />
+      <input type="text" placeholder="Digite sua Cidade" id="cdtCidade" />
+      <button onclick="cadastrar()">cadastrar</button>
+      <ul id="listPessoa"></ul>
+    </div>
 
-<script>
-    let user=[]
+    <script>
+      let user = [];
 
-    function cadastrar(){
-        let Nome = document.getElementById("cdtNome").value
-        let Idade = document.getElementById("cdtIdade").value
-        let Cidade = document.getElementById("cdtCidade").value
+      function cadastrar() {
+        let Nome = document.getElementById("cdtNome").value;
+        let Idade = document.getElementById("cdtIdade").value;
+        let Cidade = document.getElementById("cdtCidade").value;
 
-        if(Nome !== "" && Idade !== "" && Cidade !== ""){
-            let novaPessoa = {
-                Nome:Nome,
-                Idade: Number(Idade), 
-                Cidade: Cidade
+        if (Nome !== "" && Idade !== "" && Cidade !== "") {
+          let novaPessoa = {
+            Nome: Nome,
+            Idade: Number(Idade),
+            Cidade: Cidade,
+          };
+          user.push(novaPessoa);
 
-            }
-            user.push(novaPessoa)
-
-            let li =document.createElement("li")
-            li.textContent = `Nome: ${novaPessoa.Nome} | Idade: ${novaPessoa.Idade} | Cidade: ${novaPessoa.Cidade}` 
-            document.getElementById("listPessoa").appendChild(li)
-            limpar()
-
-
-        }else{
-            alert(`Valores Incorretos!`)
+          let li = document.createElement("li");
+          li.textContent = `Nome: ${novaPessoa.Nome} | Idade: ${novaPessoa.Idade} | Cidade: ${novaPessoa.Cidade}`;
+          document.getElementById("listPessoa").appendChild(li);
+          limpar();
+        } else {
+          alert(`Valores Incorretos!`);
         }
-        function limpar(){
-            cdtNome.value=""
+        function limpar() {
+          cdtNome.value = "";
         }
-    }
-</script>
+      }
+    </script>
 
-<!-- 4. Média de notas com array
+    <!-- 4. Média de notas com array
 Crie 3 inputs para o usuário digitar 3 notas.
 Ao clicar em "Calcular média", exiba a média.
 Desafio extra: diga se o aluno foi aprovado (>=7) ou reprovado. -->
+    <div>
+      <h1>4. Média de notas com array</h1>
+      <input type="text" id="NomeNota" placeholder="Digite seu Nome">
+      <input type="number" id="nota1" placeholder="Digite sua nota 1" />
+      <input type="number" id="nota2" placeholder="Digite sua nota 2" />
+      <input type="number" id="nota3" placeholder="Digite sua nota 3" />
+      <button onclick="calcular()">Calcular</button>
+      <p id="resultadoNota"></p>
+    </div>
 
-<!-- 5. Contador com botões de +1 e -1
+    <script>
+      let notaGeral = [];
+
+      function calcular() {
+        let nomeNota = document.getElementById("NomeNota").value
+        let nota1 = Number(document.getElementById("nota1").value);
+        let nota2 = Number(document.getElementById("nota2").value);
+        let nota3 = Number(document.getElementById("nota3").value);
+        let notaResultado = (nota1 + nota2 + nota3) / 3;
+
+        if (notaResultado >= 7) {
+            
+            let novaNota= {
+                novaNome: nomeNota,
+                novaNota1: nota1,
+                novaNota2: nota2,
+                novaNota3: nota3
+            }
+          notaGeral.push(novaNota)
+          resultadoNota.innerHTML += `${nomeNota} Sua nota é: ${notaResultado}`;
+        } else {
+          alert(`${nomeNota}, sua nota é: ${notaResultado}, infelizmente não foi aprovadaa`);
+        }
+      }
+    
+    </script>
+
+    <!-- 5. Contador com botões de +1 e -1
 Mostre um número na tela e crie dois botões: + e -.
 Cada clique altera o valor mostrado.
 Extra: Adicione um botão "Zerar". -->
 
-<!-- 6. Filtro de nomes (array + includes)
+<div>
+  <h1>5. Contador com botões de +1 e -1</h1><br><br>
+  <input type="number" id="valorMuda">
+  <button onclick="adicionarMais('up')">+</button>
+  <button onclick="dminuirMenos()">-</button>
+</div>
+<script>
+  function adicionarMais(op){
+    let valorMuda = Number(document.getElementById("valorMuda").value)
+    if(op == 'up'){
+
+      valorMuda.value = valorMuda + 1
+      
+    }
+  }
+</script>
+
+    <!-- 6. Filtro de nomes (array + includes)
 Crie um array com nomes fixos.
 Permita digitar um nome e filtrar a lista.
 Exiba apenas os nomes que contêm o texto digitado (como uma pesquisa). -->
-<!-- 
+    <!-- 
 7. Inverter um texto digitado
 Crie um input de texto e um botão "Inverter".
 Quando clicar, mostre o texto digitado ao contrário.
 Dica: use .split("").reverse().join("") -->
 
-<!-- 8. Cadastrar livros com título e autor (objetos + array)
+    <!-- 8. Cadastrar livros com título e autor (objetos + array)
 Crie inputs para título e autor.
 Ao clicar em "Salvar livro", adicione ao array de livros:
 [{titulo: "Dom Casmurro", autor: "Machado de Assis"}, ...]
 Mostre todos os livros abaixo com titulo - autor. -->
 
-<!-- 9. Gerador de números aleatórios
+    <!-- 9. Gerador de números aleatórios
 Crie um botão "Gerar número" que, ao ser clicado, mostre um número entre 1 e 100.
-Desafio extra: guarde os números gerados em um array e mostre todos abaixo (sem repetir). --> 
-
-
-
-    
-</body>
+Desafio extra: guarde os números gerados em um array e mostre todos abaixo (sem repetir). -->
+  </body>
 </html>
