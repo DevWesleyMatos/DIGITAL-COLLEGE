@@ -174,18 +174,19 @@ Extra: Adicione um botão "Zerar". -->
 
 <div>
   <h1>5. Contador com botões de +1 e -1</h1><br><br>
-  <input type="number" id="valorMuda">
-  <button onclick="adicionarMais('up')">+</button>
-  <button onclick="dminuirMenos()">-</button>
+  <input type="number" id="valorMuda" value="0">
+  <button onclick="adicionarMais()">+</button>
+  <button onclick="diminuirMenos()">-</button>
 </div>
 <script>
-  function adicionarMais(op){
-    let valorMuda = Number(document.getElementById("valorMuda").value)
-    if(op == 'up'){
 
-      valorMuda.value = valorMuda + 1
-      
-    }
+  function adicionarMais(){
+    let valorCont = document.getElementById("valorMuda")
+    valorCont.value=Number(valorCont.value)+1
+  }
+  function diminuirMenos(){
+    let valorCont =document.getElementById("valorMuda")
+    valorCont.value=Number(valorCont.value)-1
   }
 </script>
 
@@ -193,6 +194,28 @@ Extra: Adicione um botão "Zerar". -->
 Crie um array com nomes fixos.
 Permita digitar um nome e filtrar a lista.
 Exiba apenas os nomes que contêm o texto digitado (como uma pesquisa). -->
+
+<div>
+    <h1>Filtro de nomes (array + includes)</h1>
+    <input type="text" placeholder="Digite a lista" id="campoLista">
+    <button onclick="adicionarLista()">Pesquisar</button>
+    <input type="text" placeholder="Pesquise por..." id="pesquisa">
+    <button onclick="pesquisarLista()"></button>
+    <p id="aparcerLista"></p>
+</div>
+<script>
+    let nomeList=[]
+
+    function adicionarLista(){
+        let campoList = document.getElementById("campoLista").value
+        nomeList.push(campoList)
+        console.log(nomeList)
+        campoLista.value = ""
+    }
+    const pesquisafilter = nomeList.filter(pesquisarLista(){
+        
+    })
+</script>
     <!-- 
 7. Inverter um texto digitado
 Crie um input de texto e um botão "Inverter".
