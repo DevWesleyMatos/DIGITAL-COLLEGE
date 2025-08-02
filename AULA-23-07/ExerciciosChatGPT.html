@@ -190,7 +190,7 @@ Extra: Adicione um botão "Zerar". -->
   }
 </script>
 
-    <!-- 6. Filtro de nomes (array + includes)
+    <!-- 6.   
 Crie um array com nomes fixos.
 Permita digitar um nome e filtrar a lista.
 Exiba apenas os nomes que contêm o texto digitado (como uma pesquisa). -->
@@ -198,9 +198,9 @@ Exiba apenas os nomes que contêm o texto digitado (como uma pesquisa). -->
 <div>
     <h1>Filtro de nomes (array + includes)</h1>
     <input type="text" placeholder="Digite a lista" id="campoLista">
-    <button onclick="adicionarLista()">Pesquisar</button>
+    <button onclick="adicionarLista()">Adicionar Lista</button>
     <input type="text" placeholder="Pesquise por..." id="pesquisa">
-    <button onclick="pesquisarLista()"></button>
+    <button onclick="pesquisarLista()">Pesquisar na lista</button>
     <p id="aparcerLista"></p>
 </div>
 <script>
@@ -209,12 +209,18 @@ Exiba apenas os nomes que contêm o texto digitado (como uma pesquisa). -->
     function adicionarLista(){
         let campoList = document.getElementById("campoLista").value
         nomeList.push(campoList)
-        console.log(nomeList)
+        // console.log(nomeList)
         campoLista.value = ""
     }
-    const pesquisafilter = nomeList.filter(pesquisarLista(){
-        
-    })
+    function pesquisarLista(){
+      let campoPesq = document.getElementById("pesquisa").value
+      if(nomeList.includes(campoPesq) == true){
+        aparcerLista.innerHTML += `Vc procurou foi ${campoPesq}`  
+      }else{
+        alert(`Não foi achado na sua lista`)
+      }
+    }
+
 </script>
     <!-- 
 7. Inverter um texto digitado
