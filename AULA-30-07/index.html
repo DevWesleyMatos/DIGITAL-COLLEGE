@@ -1,24 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <h1>Exercicios JS IF</h1>
 
   <div>
-    <h5>1) Escreva	 um	 programa	 para	 ler	 2	 valores	 (considere	 que	 	 não	 serão	
-informados	valores	iguais)	e	escrever	o	maior	deles.</h5>
+    <h5>1) Escreva um programa para ler 2 valores (considere que não serão
+      informados valores iguais) e escrever o maior deles.</h5>
 
-<input type="number" placeholder="Digite uma valor" id="valor1EX1">
-<input type="number" placeholder="Digite uma valor" id="valor2EX1">
-
-<script>
-
-</script>
+    <input type="number" placeholder="Digite uma valor" id="valor1EX1">
+    <input type="number" placeholder="Digite uma valor" id="valor2EX1">
+    <button onclick="ex1Verificar()">Verificar</button>
+    <p id="mostrarEx1"></p>
   </div>
-  
+
+  <script>
+    function ex1Verificar() {
+      let valor1 = Number(document.getElementById("valor1EX1"))
+      let valor2 = Number(document.getElementById("valor2EX1").value)
+      if (valor1 > valor2) {
+        mostrarEx1.innerHTML += `valor maior é ${valor1}<br>`
+      } else {
+        mostrarEx1.innerHTML += `valor maior é ${valor2}<br>`
+      }
+      valor1.value = ""
+    }
+  </script>
+
+  <div>
+    <h5>2) . Escreva um programa para ler o ano de nascimento de uma pessoa e
+      escrever uma mensagem que diga se ela poderá ou não votar este ano
+      (não é necessário considerar o mês em que ela nasceu)</h5>
+    <input type="text" id="anoDeNascimento" placeholder="Digite seu ano...">
+    <button onclick="VerificarIdade()">Verificar Idade para Voto</button>
+    <p id="resultadoIdade"></p>
+  </div>
+  <script>
+    function VerificarIdade() {
+      let idade = Number(document.getElementById("anoDeNascimento").value)
+      if (idade >= 18) {
+        resultadoIdade.innerHTML += `sua idade é ${idade} ,então já é de maior e pode votar`
+      } else {
+        resultadoIdade.innerHTML += `sua idade é ${idade}, e vc não de maior`
+      }
+    }
+  </script>
+
+  <div>
+    <h5>
+      3) Escreva um programa que verifique a validade de uma senha fornecida
+      pelo usuário. A senha válida é o número 1234. Devem ser impressas as
+      seguintes mensagens:
+      ACESSO PERMITIDO caso a senha seja válida.
+      ACESSO NEGADO caso a senha seja inválida.
+    </h5>
+      <input type="password" placeholder="digite sua senha..." id="senhaEX3">
+      <button onclick="VerificarSenha()">Verificar</button>
+  </div>
+  <script>
+    function VerificarSenha(){
+      let senhaEX3 = document.getElementById("senhaEX3")
+      let senha=Number(senhaEX2.value)
+      if(senha == "1234"){
+        alert(`Acesso permitido <3`)
+      }else{
+        alert(`Acesso Negado!!`)
+      }
+      senhaEX3.value=""
+    }
+  </script>
+  <div>
+    <h5>
+      4)As	maçãs	 custam	 R$	 0,30	 cada	 se	 forem	 compradas	menos	 do	 que	 uma	
+dúzia,	 e	 R$	 0,25	 se	 forem	 compradas	 pelo	 menos	 doze.	 Escreva	 um	
+programa	 que	 leia	 o	 número	 de	 maçãs	 compradas,	 calcule	 e	 escreva	 o	
+valor	total	da	compra.
+    </h5>
+    <input type="number" id="qtdEX4" placeholder="Quantas maçães deseja compra?">
+    <button onclick="verificarValor()">Verificar Valor</button>
+  </div>
+  <script>
+    function verificarValor(){
+      let qtdEX4 = document.getElementById("qtdEX4")
+      let qtd = Number(qtdEX4.value)
+      
+      if(qtd <= 6){
+        qtd= qtd * 0.30
+        alert(`Valor final ficará: $${qtd}`)
+      }else{
+        qtd = qtd *0.25
+        alert(`Valor final ficará: $  ${qtd}`)
+      }
+    }
+  </script>
+  <div>
+    <h5>
+      6)Escreva	 um	 programa	 para	 ler	 3	 valores	 inteiros	 (considere	 que	 	 não	
+serão	lidos	valores	iguais)	e	escrevê-los	em	ordem	crescente.
+    </h5>
+    <input type="number" id="valor1EX5" placeholder="Digite o valor1">
+    <input type="number" id="valor2EX5" placeholder="Digite o valor2">
+    <input type="number" id="valor3EX5" placeholder="Digite o valor3">
+    <button onclick="ordemEX6()">Verificar Ordem</button>
+    <p id="resultadoOrdem"></p>
+  </div>
+  <script>
+    function ordemEX6(){
+      let valor1EX5 =Number(document.getElementById("valor1EX5").value)
+      let valor2EX5 =Number(document.getElementById("valor2EX5").value)
+      let valor3EX5 =Number(document.getElementById("valor3EX5").value)
+      if(valor1EX5>valor2EX5 && valor1EX5>valor3EX5){
+        resultadoOrdem.innerHTML += `Valor mais alto é ${valor1EX5}`
+      }else if(valor2EX5>valor1EX5 && valor2EX5>valor3EX5){
+        resultadoOrdem.innerHTML += `Valor mais alto é ${valor2EX5}`
+      }else if(valor3EX5>valor1EX5 && valor3EX5>valor2EX5){
+        resultadoOrdem.innerHTML += `Valor mais alto é ${valor3EX5}`
+      }else{
+        alert("Deu muito errado algo")
+      }
+    }
+  </script>
+  <div>
+    <h5>
+      6). Tendo	 como	 entrada	 a	 altura	 e	 o	 sexo	 (codificado	 da	 seguinte	 forma:	
+1:feminino	 	 2:masculino)	 de	 uma	 pessoa,	 construa	 um	 programa	 que	
+calcule	e	imprima	seu	peso	ideal,	utilizando	as	seguintes	
+Fórmulas:- para	homens:	(72.7	*	Altura)	– 58	
+- para	mulheres:	(62.1	*	Altura)	– 44.7	
+    </h5>
+    <input type="number" id="pesoEX6" placeholder="Digite seu peso">
+    <input type="number" id="alturaEX6" placeholder="Digite sua altura">
+    <input type="radio" name="sexo" id="masculino" value="masculino">masculino
+    <input type="radio" name="sexo" id="feminino" value="feminino">feminino
+    <button onclick="ideal()">Verificar</button>
+  </div>
+  <script>
+    function ideal(){
+      let peso = Number(document.getElementById("pesoEX6").value)
+      let altura = Number(document.getElementById("alturaEX6").value)
+      let sexo = document.getElementsByName("sexo")
+      if(sexo.checked=sexo.value("masculino")){
+        let formula = Number((72.7	*	altura)-58)
+        alert(`seu peso atual é ${peso}, seu peso ideal é${formula}`)	
+      }
+    }
+  </script>
 </body>
+
 </html>
