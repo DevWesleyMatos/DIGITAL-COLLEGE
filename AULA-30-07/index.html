@@ -144,10 +144,51 @@ Fórmulas:- para	homens:	(72.7	*	Altura)	– 58
     function ideal(){
       let peso = Number(document.getElementById("pesoEX6").value)
       let altura = Number(document.getElementById("alturaEX6").value)
-      let sexo = document.getElementsByName("sexo")
-      if(sexo.checked=sexo.value("masculino")){
+      let sexo = document.querySelector('input[name="sexo"]:checked')
+      if(sexo.value=="masculino"){
         let formula = Number((72.7	*	altura)-58)
-        alert(`seu peso atual é ${peso}, seu peso ideal é${formula}`)	
+        alert(`seu peso atual é ${peso}, seu peso ideal é: ${formula}`)	
+      }if(sexo.value=="feminino"){
+        let formula =Number((62.1	*	altura)-44.7)
+        alert(`seu peso atual é ${peso}, seu peso ideal é: ${formula}`)	
+      }else{
+        alert(`Algo deu muito errado`)
+      }
+    }
+  </script>
+  <div>
+    <h5>
+    7)  Escreva	um	programa	para	ler	o	número	de	lados	de	um	polígono	regular	
+e	a	medida	do	lado	(em	cm).	Calcular	e	imprimir	o	seguinte:	
+− Se	o	número	de	lados	for	igual	a	3	escrever	TRIÂNGULO	e	o	valor	da	
+área
+− Se	o	número	de	lados	for	igual	a	4	escrever	QUADRADO	e	o	valor	da	
+sua	área.	
+− Se	o	número	de	lados	for	igual	a	5	escrever	PENTÁGONO.
+    </h5>
+    <input type="number" id="valor1EX7" placeholder="Digite um valor">
+    <input type="number" id="valor2EX7" placeholder="Digite um valor">
+    <input type="number" id="valor3EX7" placeholder="Digite um valor">
+    <input type="number" id="valor4EX7" placeholder="Digite um valor">
+    <input type="number" id="valor5EX7" placeholder="Digite um valor">
+    <button onclick="verificarPoligono()">Verificar</button>
+  </div>
+  <script>
+    function verificarPoligono(){
+      let valor1 = Number(document.getElementById("valor1EX7").value)
+      let valor2 = Number(document.getElementById("valor2EX7").value)
+      let valor3 = Number(document.getElementById("valor3EX7").value)
+      let valor4 = Number(document.getElementById("valor4EX7").value)
+      let valor5 = Number(document.getElementById("valor5EX7").value)
+      if(valor1>"" && valor2>"" && valor3>""){
+        let SemiPerimetro = (valor1 + valor2 +valor3)/2
+        let aeraTriangulo = Math.sqrt(SemiPerimetro*(SemiPerimetro-valor1)*(SemiPerimetro-valor2)*(SemiPerimetro-valor3))
+        alert(`Vc digitou lados de um Triangulo e sua Aera é ${aeraTriangulo}`)
+      }if(valor1>"" && valor2>"" && valor3>"" && valor4>""){
+        
+        alert(`Vc digitou lados de um Quadrado`)
+      }if(valor1>"" && valor2>"" && valor3>"" && valor4>"" && valor5>""){
+        alert(`Vc digitou lados de um Pentagano`)
       }
     }
   </script>
