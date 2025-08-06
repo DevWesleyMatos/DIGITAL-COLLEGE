@@ -174,12 +174,13 @@ sua	área.
     <button onclick="verificarPoligono()">Verificar</button>
   </div>
   <script>
-    function verificarPoligono(){
       let valor1 = Number(document.getElementById("valor1EX7").value)
       let valor2 = Number(document.getElementById("valor2EX7").value)
       let valor3 = Number(document.getElementById("valor3EX7").value)
       let valor4 = Number(document.getElementById("valor4EX7").value)
       let valor5 = Number(document.getElementById("valor5EX7").value)
+    function verificarPoligono(){
+
       if(valor1>"" && valor2>"" && valor3>""){
         let SemiPerimetro = (valor1 + valor2 +valor3)/2
         let aeraTriangulo = Math.sqrt(SemiPerimetro*(SemiPerimetro-valor1)*(SemiPerimetro-valor2)*(SemiPerimetro-valor3))
@@ -192,6 +193,107 @@ sua	área.
       }
     }
   </script>
+  <div>
+    <h5>
+      8. Acrescente	 as	 seguintes	 mensagens	 à	 solução	 do	 exercício	 anterior	
+conforme	o	caso.	
+− Caso	 o	 número	 de	 lados	 seja	 inferior	 a	 3	 escrever	 NÃO	 É	 UM	
+POLÍGONO.	
+− Caso	o	número	de	lados	seja	superior	a	5	escrever	POLÍGONO	NÃO	
+IDENTIFICADO
+    </h5>
+    <button onclick="verificarPoligonoReal()">Verificar Poligano</button>
+  </div>
+  <script>
+    
+    function verificarPoligonoReal(){
+      
+      let valor1 = Number(document.getElementById("valor1EX7").value)
+      let valor2 = Number(document.getElementById("valor2EX7").value)
+      let valor3 = Number(document.getElementById("valor3EX7").value)
+      let valor4 = Number(document.getElementById("valor4EX7").value)
+      let valor5 = Number(document.getElementById("valor5EX7").value)
+      if(valor1>""){
+        alert(`Não é Poligano`)
+      }
+    }
+  </script>
+  <div>
+    <h5>
+      9. Escreva	um	programa	para	ler	3	valores	inteiros	e	escrever	o	maior	deles.	
+Considere	que	o	usuário	não	informará	valores	iguais.
+    </h5>
+<input type="number" name="" id="valor1EX9" placeholder="Digite um Valor...">
+<input type="number" name="" id="valor2EX9" placeholder="Digite um Valor...">
+<input type="number" name="" id="valor3EX9" placeholder="Digite um Valor...">
+<button onclick="ordem()">Verificar Ordem</button>
+<p id="mostrarEX9"></p>
+  </div>
+<script>
+  function ordem(){
+    let valor1EX9 = Number(document.getElementById("valor1EX9").value)
+    let valor2EX9 = Number(document.getElementById("valor2EX9").value)
+    let valor3EX9 = Number(document.getElementById("valor3EX9").value)
+    if(valor1EX9> valor2EX9 && valor1EX9> valor3EX9 && valor2EX9> valor3EX9){
+      mostrarEX9.innerHTML =`A ordem dos numeros é ${valor1EX9}, ${valor2EX9}, ${valor3EX9}`
+    }
+    if(valor2EX9> valor1EX9 && valor2EX9> valor3EX9 && valor1EX9>valor3EX9){
+      mostrarEX9.innerHTML =`A ordem dos numeros é ${valor2EX9}, ${valor1EX9}, ${valor3EX9}`
+    }    if(valor3EX9> valor1EX9 && valor3EX9> valor2EX9 && valor1EX9>valor2EX9){
+      mostrarEX9.innerHTML =`A ordem dos numeros é ${valor3EX9}, ${valor1EX9}, ${valor2EX9}`
+    }
+  }
+</script>
+<div>
+  <h5>
+    10. Escreva	 um	 programa que	 leia	 as	 medidas	 dos	 lados	 de	 um	 triângulo	 e	
+escreva	se	ele	é	Equilátero,	Isósceles	ou	Escaleno.	Sendo	que:	
+− Triângulo	Equilátero:	possui	os	3	lados	iguais.	
+− Triângulo	Isóscele:	possui	2	lados	iguais.	
+− Triângulo	Escaleno:	possui	3	lados	diferentes.
+  </h5>
+  <input type="number" name="" id="valor1EX10" placeholder="digite o valor do lado do Triangulo">
+  <input type="number" name="" id="valor2EX10" placeholder="digite o valor do lado do Triangulo">
+  <input type="number" name="" id="valor3EX10" placeholder="digite o valor do lado do Triangulo">
+  <p id="mostrarEX10"></p>
+  <button onclick="statusTriangulo()">Verificar</button>
+  
+  <button onclick="AnguloTriangulo()">Verificar Angulo</button>
+</div>
+<script>
+function statusTriangulo(){
+  let valor1EX10 = Number(document.getElementById("valor1EX10").value)
+  let valor2EX10 = Number(document.getElementById("valor2EX10").value)
+  let valor3EX10 = Number(document.getElementById("valor3EX10").value)
+  if(valor1EX10 ==valor2EX10 && valor1EX10 ==valor3EX10){
+    mostrarEX10.innerHTML =`Triângulo	Equilátero:	possui	os	3	lados	iguais.`
+  }if(valor1EX10 == valor2EX10 && valor1EX10 != valor3EX10 || valor1EX10!=valor2EX10 && valor1EX10==valor3EX10 || valor2EX10 ==valor3EX10 && valor3EX10!=valor1EX10){
+    mostrarEX10.innerHTML =`Triângulo	Isóscele:	possui	2	lados	iguais.	`
+  }else if(valor1EX10 != valor2EX10 && valor1EX10!=valor3EX10 & valor2EX10!=valor3EX10){
+   mostrarEX10.innerHTML =`
+− Triângulo	Escaleno:	possui	3	lados	diferentes.`
+  }
+}
+
+// Escreva	 um	 programa	 que	 leia	 o	 valor	 de	 3	 ângulos	 de	 um	 triângulo	 e	
+// escreva	 se	 o	 triângulo	 é	 Acutângulo,	 Retângulo	 ou	 Obtusângulo.	 Sendo	
+// que:	
+// − Triângulo	Retângulo:	possui	um	ângulo	reto.	(igual	a	90º)
+// − Triângulo	Obtusângulo:	possui	um	ângulo	obtuso.	(maior	que90º)	
+// − Triângulo	Acutângulo:	possui	três	ângulos	agudos.	(menor	que	90º)
+function AnguloTriangulo(){
+  let valor1EX10 = Number(document.getElementById("valor1EX10").value)
+  let valor2EX10 = Number(document.getElementById("valor2EX10").value)
+  let valor3EX10 = Number(document.getElementById("valor3EX10").value)
+  let a = valor1EX10
+  let b = valor2EX10
+  let c = valor3EX10
+  let Retangulo = ((b**2)+(c**2)-(a**2))
+  if(Retangulo>0){
+    alert(`o angulo desse triangulo é`)
+  }
+}
+</script>
 </body>
 
 </html>
