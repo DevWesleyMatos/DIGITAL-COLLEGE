@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h5>Salario de aumento</h5>
+        <input type="number" id="salario" placeholder="Digite seu salario...">
+        <button onclick="verificar()">Verificar</button>
+        <p id="mostrar"></p>
+    </div>
+    <script>
+        function verificar(){
+            let salario = Number(document.getElementById("salario").value)
+            if(salario <= 280){
+                let aumento = salario *0.2
+                let NovoSalario = salario *1.2
+                mostrar.innerHTML = `Seu salario é ${salario}, O seu reajuste foi de ${aumento}, seu novo salario é ${NovoSalario}`
+            }
+        }
+    </script>
+
+    <div>
+        <h5>
+            1. Faça um script que verifique se uma letra digitada num campo de input é vogal ou consoante.
+        </h5>
+        <input type="text" placeholder="Digite uma Letra" id="LetraEx1">
+        <button onclick="EX1()">Verificar</button>
+    </div>
+    <script>
+        function EX1(){
+            let letra = document.getElementById("LetraEx1").value
+            letra = letra.toLowerCase()
+            if (letra == 'a' || letra =='e' || letra =='i' || letra =='o' || letra=='u' ) {
+                alert(`Vc Digitou uma vogal "${letra}"`)
+            }else{
+                alert(`vc digitou uma consoante "${letra}"`)
+            }
+        }
+    </script>
+    <div>
+        <h5>
+            2. Faça um script que pede duas notas de um aluno. Em seguida ele deve calcular a média do aluno e dar o seguinte resultado:
+
+    A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+    A mensagem "Reprovado", se a média for menor do que sete;
+    A mensagem "Aprovado com Distinção", se a média for igual a dez.
+Calcular média de dois números
+        </h5>
+        <input type="number" name="" id="nota1" placeholder="Digite a nota1">
+        <input type="number" name="" id="nota2" placeholder="Digite a nota2">
+        <button onclick="EX2()">Verificar Media</button>
+        <p id="mostrarEX2"></p>
+    </div>
+    <script>
+        function EX2(){
+            let nota1 = Number(document.getElementById("nota1").value)
+            let nota2 = Number(document.getElementById("nota2").value)
+            let media = (nota1 +nota2)/2
+            if (media >= 7) {
+                mostrarEX2.innerHTML = `Aprovado com sua Media ${media}`
+            } else if(media<7){
+                mostrarEX2.innerHTML = `Reprovado sua Media ${media}`
+            }else if(media == 10){
+                mostrarEX2.innerHTML =`Aprovado com Distinção ${media}`
+            }else{
+                mostrarEX2.innerHTML = `Aconteceu algo muito ruim`
+            }
+        }
+    </script>
+    <div>
+        <h5>
+            3. Faça um script que leia três números inteiros e mostre o maior deles.
+Recebe três números e mostra o maior
+        </h5>
+        <input type="number" id="valor1" placeholder="valor1">
+        <input type="number" id="valor2" placeholder="valor2">
+        <input type="number" id="valor3" placeholder="valor3">
+        <button onclick="EX3()">verificar</button>
+        <p id="mostrarEX4"></p>
+    </div>
+    <script>
+        function EX3(){
+            let valor1 = Number(document.getElementById("valor1").value)
+            let valor2 = Number(document.getElementById("valor1").value)
+            let valor3 = Number(document.getElementById("valor1").value)
+
+            if (valor1 > valor2 && valor1 > valor3 && valor2> valor3) {
+                mostrar.innerHTML = `${valor1}, ${valor2}, ${valor3}`
+            }else if(valor){
+                
+            }else if (valor2 > valor1 && valor2 > valor3 && valor1 > valor3) {
+                mostrar.innerHTML = `${valor2}, ${valor1}, ${valor3}`
+            }
+        }
+    </script>
+    <div>
+        <h5>
+            4. Faça um script que pede dois inteiros e armazene eles em duas variáveis. Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
+        </h5>
+        <input type="number" id="numero1" placeholder="valor1">
+        <input type="number" id="numero2" placeholder="valor2">
+        <button onclick="EX4()">trocar ordem</button>
+        
+    </div>
+    <script>
+        function EX4(){
+            let numero1 = Number(document.getElementById("numero1").value)
+            let numero2 = Number(document.getElementById("numero2").value)
+            let NovoNumero1 = Number(numero2)
+            let NovoNumero2 = Number(numero1)
+
+            if(numero1 !="" && numero2 !=""){
+                alert(`O campo um é ${numero1} e campo dois ${numero2}`)
+                alert(`O campo um é ${NovoNumero1} e campo dois ${NovoNumero2}`)
+            }
+        }
+    </script>
+    
+</body>
+</html>

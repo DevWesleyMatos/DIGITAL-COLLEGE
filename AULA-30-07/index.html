@@ -274,7 +274,6 @@ function statusTriangulo(){
 − Triângulo	Escaleno:	possui	3	lados	diferentes.`
   }
 }
-
 // Escreva	 um	 programa	 que	 leia	 o	 valor	 de	 3	 ângulos	 de	 um	 triângulo	 e	
 // escreva	 se	 o	 triângulo	 é	 Acutângulo,	 Retângulo	 ou	 Obtusângulo.	 Sendo	
 // que:	
@@ -288,9 +287,16 @@ function AnguloTriangulo(){
   let a = valor1EX10
   let b = valor2EX10
   let c = valor3EX10
-  let Retangulo = ((b**2)+(c**2)-(a**2))
-  if(Retangulo>0){
-    alert(`o angulo desse triangulo é`)
+  let angulo = ((b**2)+(c**2)-(a**2))/(2*b*c)
+  if(angulo == 90){
+    console.log(`${a}, ${b}, ${c}`)
+    alert(`o angulo desse triangulo é ${angulo}, TriânguloRetângulo`)
+  }if(angulo> 90){
+    console.log(`${a}, ${b}, ${c}`)
+    alert(`o angulo desse triangulo é ${angulo},Triângulo	Obtusângulo`) 
+  }if(angulo<90){
+    alert(`o angulo desse triangulo é ${angulo},Triângulo	Actusângulo`) 
+
   }
 }
 </script>
