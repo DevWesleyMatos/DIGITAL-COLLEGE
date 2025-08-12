@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>
+            1️⃣ Contagem simples
+Escreva um programa que imprima os números de 1 a 10 usando for.
+        </h3>
+        <input type="number" placeholder="Adicione um numero até 10: " id="ATV1">
+        <button onclick="btn1()">Escrever até 10 </button>
+        <P id="mostrarATV1"></P>
+    </div>
+    <script>
+        function btn1(){
+            let ATV1 = Number(document.getElementById("ATV1").value)
+            
+            for (let index = ATV1; index <= 10; index++) {
+                mostrarATV1.innerHTML +=`${index}, `        
+            }
+        }
+    </script>
+    <div>
+        <h3>
+            2️⃣ Tabuada de um número
+Peça ao usuário para digitar um número e use for para mostrar a tabuada dele de 1 a 10.
+        </h3>
+        <input type="number" placeholder="Digite um numero: " id="ATV2">
+        <button onclick="btn2()">Veja a tabuada</button>
+        <p id="mostrarATV2"></p>
+    </div>
+<script>
+    function btn2(){
+        let ATV2 = Number(document.getElementById("ATV2").value)
+        for (let index = 0; index < 10; index++) {
+            let mult = ATV2 * index
+           mostrarATV2.innerHTML += `valor ${ATV2} x ${index} = ${mult} <br> `          
+        }
+    }
+</script>
+<div>
+    <h3>
+        3️⃣ Soma de números
+Use for para somar todos os números de 1 a 100 e mostrar o resultado.
+    </h3>
+    <button onclick="ATV3()">Mostrar Numeros até 100 e sua soma</button>
+    <p id="mostrar1ao100"></p>
+    <p id="soma1ao100"></p>
+</div>
+<script>
+    function ATV3(){
+        for (let index = 0; index <= 100; index++) {
+            mostrar1ao100.innerHTML += `${index}, `
+            let soma = 
+            soma1ao100.innerHTML +=`${soma} `
+        }
+    }
+</script>
+</body>
+</html>
