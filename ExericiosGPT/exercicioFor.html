@@ -60,5 +60,27 @@ Use for para somar todos os números de 1 a 100 e mostrar o resultado.
         }
     }
 </script>
+<div>
+    <h3>
+        4️⃣ Números pares
+         Escreva um programa que mostre apenas os números pares de 1 a 20.
+    </h3>
+    <button onclick="ATV4()">Mostrar Pares</button>
+    <p id="mostrarPares"></p>
+</div>
+<script>
+    let numerosAte20 = [[],[]]
+    function ATV4(){
+        for (let index = 0; index < 20; index++) {
+              
+            if (index%2 == 0 ) {
+                numerosAte20[0].push(index)
+                mostrarPares.innerHTML +=`${index}, `
+            }  else{
+                numerosAte20[1].push(index)
+            }
+        }
+}
+</script>
 </body>
 </html>
