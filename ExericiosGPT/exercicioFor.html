@@ -48,15 +48,23 @@ Peça ao usuário para digitar um número e use for para mostrar a tabuada dele 
 Use for para somar todos os números de 1 a 100 e mostrar o resultado.
     </h3>
     <button onclick="ATV3()">Mostrar Numeros até 100 e sua soma</button>
-    <p id="mostrar1ao100"></p>
+    <button onclick="btnSoma()">Somar 100 elementos</button>
+    <p id="mostrar1ao100"></p><br>
     <p id="soma1ao100"></p>
 </div>
 <script>
+    let numerosate100 = []
     function ATV3(){
         for (let index = 0; index <= 100; index++) {
             mostrar1ao100.innerHTML += `${index}, `
-            let soma = 
-            soma1ao100.innerHTML +=`${soma} `
+            numerosate100.push(index)
+        }
+    }
+    function btnSoma(){
+        let soma = 0 
+        for (let index = 0; index <= 100; index++) {
+            soma = numerosate100[index]+soma
+            soma1ao100.innerHTML = soma
         }
     }
 </script>
