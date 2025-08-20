@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>
+            1) Tabuada completa com arrays
+
+Peça ao usuário um número e armazene no array os resultados da tabuada desse número (de 1 a 10).
+Exemplo: se digitar 5, o array deve conter [5, 10, 15, ..., 50].
+        </h4>
+        <input type="number" placeholder="Digite um numero" id="ex1">
+        <button onclick="btn1()">Tabuada</button>
+        <p id="mostrarEx1"></p>
+    </div>
+    <script>
+        function btn1(){
+            let tabuada = 0
+            let ex1 = Number(document.getElementById("ex1").value)
+            for (let index = 0; index < 11; index++) {
+                tabuada = ex1 *index
+                mostrarEx1.innerHTML +=`valor: ${ex1} X ${index} = ${tabuada} <br>`
+            }
+        }
+    </script>
+    <div>
+        <h4>
+2) Inverter um array
+
+Crie um array com números de 1 a 10. Use um for para gerar um novo array invertido (de 10 a 1).      
+  </h4>
+<button onclick="ex2()">Criar array</button>
+<p id="mostrarEx2"></p>
+<p id="mostrarEx2invertido"></p>
+    </div>
+    <script>
+        let array = []
+        let arrayinvertido = []
+        function ex2(){
+            for (let index = 1; index <= 10; index++) {
+                array.push(index)
+                mostrarEx2.innerHTML = `${array}, `
+            }
+            for (let index = 10; index >=1; index--) {
+                arrayinvertido.push(index)
+                mostrarEx2invertido.innerHTML =`${arrayinvertido}`       
+            }
+        }
+    </script>
+    <div>
+        <h3>
+            3) Somar apenas os números pares
+            Peça ao usuário 10 números, armazene-os em um array e, ao final, calcule a soma apenas dos pares.
+        </h3>
+        <button onclick="btn3()">Somar pares</button>
+        <p id="mostrarEX3"></p>
+    </div>
+    <script>
+         let numeros1ao100 = []
+        function btn3(){
+            let soma = 0
+            for (let index = 0; index <=10; index+=2) {
+                numeros1ao100.push(index)
+                soma += index
+            }
+                mostrarEX3.innerHTML = `${numeros1ao100}, `
+        }
+    </script>
+</body>
+</html>
