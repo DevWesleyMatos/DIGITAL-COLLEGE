@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h3>
+            Imprimir números de 1 a 10
+        </h3>
+        <button onclick="btn1()">Numeros</button>
+        <p id="mostrarbtn1"></p>
+    </div>
+    <div>
+        <h3>
+             Soma dos números de 1 a 100
+        </h3>
+        <p id="mostrar2"></p>
+    </div>
+    <script>
+        let numeros0ao100 = []
+        let soma = 0
+
+        function btn1() {
+            for (let index = 0; index <= 100; index++) {
+                numeros0ao100.push(index)
+                mostrarbtn1.innerHTML = `${numeros0ao100}, `
+                soma += index
+                mostrar2.innerHTML = `A soma dos numeros é: ${soma}`
+            }    
+        }
+    </script>
+<div>
+    <h3>
+        O quadrado dos números inteiros de 15 até 200
+    </h3>
+    <button onclick="btn2()">verificar</button>
+    <p id="mostrarbtn2"></p>
+</div>
+<script>
+function btn2() {
+    let numero = []
+    for (let index = 16; index < 200; index+=4) {
+        numero.push(index)
+        mostrarbtn2.innerHTML = numero
+    }
+}
+</script>
+<div>
+    <h3>
+         Apresente os números ímpares entre 1 e 10
+    </h3>
+    <button onclick="btn3()">verificar</button>
+    <p id="mostrarbtn3"></p>
+</div>
+<script>
+    function btn3(){
+        let impares = []
+        for (let index = 1; index <100; index+=2) {
+            impares.push(index)
+            mostrarbtn3.innerHTML = impares
+        }
+    }
+</script>
+<div>
+    <h3>
+        Imprimir a tabuada do número  
+    </h3>
+    <input type="number" placeholder="digite um numero" id="tabuada">
+    <button onclick="btn4()">verificar</button>
+    <p id="mostrarbtn4"></p>
+</div>
+<script>
+    function btn4(){
+        let tabuada = Number(document.getElementById("tabuada").value)
+        let soma = 0
+        for (let index = 1; index <= 10; index++) {
+            soma = tabuada*index
+            mostrarbtn4.innerHTML += `valor: ${tabuada} X ${index} = ${soma} <br>`
+        }
+    }
+</script>
+<div>
+    <h3>
+        Calcular o fatorial 
+    </h3>
+    <input type="number" placeholder="digite um valor..." id="valorRecebido">
+    <button onclick="btn5()">verificar</button>
+    <p id="mostrarbtn5"></p>
+</div>
+<script>
+    function btn5(){
+        let fatorial = 1
+        let valorRecebido = Number(document.getElementById("valorRecebido").value)
+        for (let index = 1; index <= valorRecebido ; index++) {
+            fatorial = fatorial * index
+            mostrarbtn5.innerHTML = fatorial    
+        }
+    }
+</script>
+</body>
+
+</html>
