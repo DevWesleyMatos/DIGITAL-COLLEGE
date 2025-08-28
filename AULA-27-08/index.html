@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>
+            numeros de 0 a 10, verificar quais são pares
+        </h1>
+        <button onclick="Numeros()">Mostrar numeros</button>
+        <p id="mostrarNumeros"></p>
+       
+        <p id="mostrarpares"></p>
+        
+        <p id="mostrarimpares"></p>
+    </div>
+    <script>
+        let numeros = []
+        let pares = []
+        function Numeros() {
+            for (let index = 0; index <=10 ; index++) {
+                numeros.push(index)
+                mostrarNumeros.innerHTML = numeros
+                if (numeros[index] % 2 === 0 ) { 
+                    pares.push(numeros[index])
+                    console.log(pares);
+                }
+                mostrarpares.innerHTML = `${pares} é Par`
+            }
+            
+        }
+    </script>
+</body>
+</html>
