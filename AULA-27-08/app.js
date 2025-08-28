@@ -102,22 +102,23 @@
 // }
 // console.log(maiorPessoa());
 
-const carros = [
-  { marca: "Ford", ano: 2010 },
-  { marca: "Chevrolet", ano: 2020 },
-  { marca: "Fiat", ano: 2005 },
-  { marca: "Volkswagen", ano: 2018 },
-  { marca: "Toyota", ano: 2015 },
-  { marca: "Honda", ano: 2012 },
-  { marca: "Nissan", ano: 2019 },
-  { marca: "Hyundai", ano: 2016 },
-  { marca: "Kia", ano: 2021 },
-  { marca: "Jeep", ano: 2008 }
-];
-// Use for e if para imprimir apenas os carros fabricados a partir de 2010.
-for (let index = 0; index < carros.length; index++) {
-    if (carros[index].ano >=2010) {
-        console.log(`${carros[index].marca}`)
-    }
-}
+// const carros = [
+//   { marca: "Ford", ano: 2010 },
+//   { marca: "Chevrolet", ano: 2020 },
+//   { marca: "Fiat", ano: 2005 },
+//   { marca: "Volkswagen", ano: 2018 },
+//   { marca: "Toyota", ano: 2015 },
+//   { marca: "Honda", ano: 2012 },
+//   { marca: "Nissan", ano: 2019 },
+//   { marca: "Hyundai", ano: 2016 },
+//   { marca: "Kia", ano: 2021 },
+//   { marca: "Jeep", ano: 2008 }
+// ];
+// // Use for e if para imprimir apenas os carros fabricados a partir de 2010.
+// for (let index = 0; index < carros.length; index++) {
+//     if (carros[index].ano >=2010) {
+//         console.log(`${carros[index].marca}`)
+//     }
+// }
 
+// - Crie uma função chamada buscarPessoaPorNome que recebe um array de objetos com as propriedades nome e idade, e um nome como parâmetro. A função deve retornar o objeto correspondente ao nome, ou uma mensagem dizendo que a pessoa não foi encontrada.
