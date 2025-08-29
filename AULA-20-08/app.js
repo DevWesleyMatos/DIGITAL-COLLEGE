@@ -20,9 +20,5 @@ const alunos = [
   { nome: "Carla", notas: [5, 6, 4] }
 ];
 for (let index = 0; index < alunos.length; index++) {
-    if (alunos[index].notas[index] == 7) {
-        console.log(alunos[index]);
-        
-    }
     
 }
