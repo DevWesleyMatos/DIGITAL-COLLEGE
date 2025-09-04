@@ -122,3 +122,6 @@
 // }
 
 // - Crie uma função chamada buscarPessoaPorNome que recebe um array de objetos com as propriedades nome e idade, e um nome como parâmetro. A função deve retornar o objeto correspondente ao nome, ou uma mensagem dizendo que a pessoa não foi encontrada.
+
+
+
