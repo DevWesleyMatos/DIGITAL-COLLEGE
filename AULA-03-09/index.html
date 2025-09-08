@@ -4,41 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
 </head>
 <body>
-    <input type="text" id="entrada">
-    <button onclick="verificar()">verificar</button>
-    <p id="mostrar"></p>
+<style>
+    img{
+        width: 80px;
+    }
+</style>
+<div class="container mt-3">
+<table id="tabela" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Status</th>
+            <th>Imagem</th>
+        </tr>
+    </thead>
+    <tbody id="tabela-body"></tbody>
+</table>
+</div>
 
-    <script>
-  const pessoas = [
-  { nome: 'Carlos', idade: 20 },
-  { nome: 'Ana', idade: 40 },
-  { nome: 'Carlos', idade: 35 },
-  { nome: 'Lucas', idade: 25 },
-  { nome: 'Maria', idade: 30 },
-  { nome: 'Pedro', idade: 22 },
-  { nome: 'João', idade: 27 },
-  { nome: 'Fernanda', idade: 32 },
-  { nome: 'Camila', idade: 19 },
-  { nome: 'Ricardo', idade: 45 },
-  { nome: 'Rafael', idade: 28 },
-  { nome: 'Patrícia', idade: 36 },
-  { nome: 'Juliana', idade: 34 },
-  { nome: 'Miguel', idade: 21 },
-  { nome: 'Roberta', idade: 33 },
-  { nome: 'Bruna', idade: 26 },
-  { nome: 'Gustavo', idade: 24 },
-  { nome: 'Mariana', idade: 31 },
-  { nome: 'Luana', idade: 29 },
-  { nome: 'André', idade: 23 }
-];
 
-// - Crie uma função chamada verificarPessoa que recebe um array de objetos com as propriedades nome e idade, e um nome como parâmetro. A função deve retornar true se a pessoa com o nome informado estiver presente no array, e false caso contrário, usando um laço for.
-function verificar() {
-    let entrada = document.getElementById("entrada").value
-    pessoa
-}
-    </script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
