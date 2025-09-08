@@ -1,4 +1,4 @@
-function faGet(url) {
+function fazGet(url) {
       let request = new XMLHttpRequest();
       request.open("GET", url, false);
       request.send();
@@ -31,7 +31,7 @@ function faGet(url) {
     }
 
     function main() {
-      let data = faGet("https://rickandmortyapi.com/api/character");
+      let data = fazGet("https://rickandmortyapi.com/api/character");
       let usuarios = JSON.parse(data);
 
       let tabela = document.getElementById("tabela-body");
