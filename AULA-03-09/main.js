@@ -1,9 +1,9 @@
-function fazGet(url) {
-      let request = new XMLHttpRequest();
-      request.open("GET", url, false);
-      request.send();
-      return request.responseText;
-    }
+// function fazGet(url) {
+//       let request = new XMLHttpRequest();
+//       request.open("GET", url, false);
+//       request.send();
+//       return request.responseText;
+//     }
 
     function criaLinha(usuario) {
       let linha = document.createElement("tr");
@@ -31,15 +31,26 @@ function fazGet(url) {
     }
 
     function main() {
-      let data = fazGet("https://rickandmortyapi.com/api/character");
-      let usuarios = JSON.parse(data);
+      // let data = fazGet("https://rickandmortyapi.com/api/character");
+      // let usuarios = JSON.parse(data);
+
+      const url ='https://rickandmortyapi.com/api/character'
+      fetch(url,{
+        method: 'GET'
+      })
+      .then((response) =>{
+        return response.json()
+      })
+      .then((data) =>{
+        console.log(data)
 
       let tabela = document.getElementById("tabela-body");
 
-      usuarios.results.forEach(element => {
-        let linha = criaLinha(element);
-        tabela.appendChild(linha);
+        data.results.forEach(element => {
+          let linha = criaLinha(element);
+          tabela.appendChild(linha);
       });
+      })
     }
 
     main();
