@@ -35,3 +35,13 @@ let precoProdutos = produtos.map(function(valor) {
 return valor
 }) 
 console.log(precoProdutos);
+
+
+let nomesProdutos = produtos.filter(function(produto) {
+    if (produto.preco >= 70) {
+        console.log(produto.nome)
+    }else{
+        console.log("Deu errado");
+    }
+})
+console.log(nomesProdutos);
