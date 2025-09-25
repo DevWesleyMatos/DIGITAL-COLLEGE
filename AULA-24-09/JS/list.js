@@ -83,6 +83,5 @@ const pasteis = [
 //         `
 //         tbody.appendChild(tr)
 //     }
-    pastel = pasteis.map((pastel) => let tr = document.createElement("tr"))
 
 products()
