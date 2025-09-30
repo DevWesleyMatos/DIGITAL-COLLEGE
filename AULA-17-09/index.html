@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1></h1>
+<h2 class="titulo2"></h2>
+<h3 id="titulo3"></h3>
+<div></div>
+<button>test</button>
+
+<script>
+    // // let h1 = document.getElementsByTagName("h1")
+    // // let h2 = document.getElementsByClassName("titulo2")
+    // // let h3 = document.getElementById("titulo3")
+
+    // let h1 = document.querySelector("h1")
+    // let h2 = document.querySelector(".titulo2")
+    // let h3 = document.querySelector("#titulo3")
+
+    // h1.innerHTML = "ola mundo"
+    // h2.innerHTML = "ola mundo"
+    // h3.innerHTML = "ola mundo"
+
+    // let div = document.querySelector("div")
+    // div.innerHTML = `<h1> AEaeaeaeaeaeaeaea </h1>`
+
+    // h1.classList.add("title")
+    // h2.classList.add("title2")
+    // h3.classList.add("title3")
+
+    // h1.classList.remove("title")
+    // h2.classList.remove("title2")
+    // h3.classList.remove("title3")
+
+    function render() {
+        let h1 = document.querySelector("h1")
+        h1.innerHTML = "presta atenção"
+    }
+    let button = document.querySelector("button")
+    button.addEventListener("click", render)
+</script>
+</body>
+</html>

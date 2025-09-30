@@ -14,7 +14,7 @@ console.log(dobrarPares);
 
 // Filtre os nomes com até 4 letras.
 // Depois transforme-os em maiúsculas.
-let nomes = ["Ana", "Carlos", "Beatriz", "João", "Rafa"];
+let nomes = ["ana", "carlos", "beatriz", "joão", "rafa"];
 
 nomes4letras = nomes.filter(function (nome) {
     return nome.length <=4
@@ -26,3 +26,7 @@ nomesMaiusculo = nomes4letras.map(function(maiuscula) {
 })
 console.log(nomesMaiusculo);
 
+let NomeAdicionado = "wexxley"
+nomes.push(NomeAdicionado)
+
+console.log(nomes);
