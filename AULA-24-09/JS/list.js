@@ -85,7 +85,7 @@ function products() {
         <td> ${pasteis[index].ingredientes}</td>
         <td>
           <button class="btn btn-warning" onclick="edit()">Editar</button>
-          <button class=" btn btn-danger">Excluir</button>
+          <button class=" btn btn-danger" onclick="deletarPasteis(${pasteis[index].id})">Excluir</button>
         </td>
         `
         tbody.appendChild(tr)
@@ -161,7 +161,7 @@ function adicionar() {
 function edit() {
 
 
-  
+
   let id = document.querySelector("#inputId").value
   let nome = document.querySelector("#inputNome").value
   let preco = document.querySelector("#inputPreco").value
@@ -179,5 +179,14 @@ function edit() {
   tbody.innerHTML =""
   products()
 
+
+}
+
+function deletarPasteis(id) {
+  let tbody =document.querySelector("tbody")
+  let pastel = pasteis.find((pastel) => pastel.id === id)
+  pasteis.splice(pastel, 1)
+  tbody.innerHTML = ""
+  products()
 
 }
