@@ -143,15 +143,6 @@ function login() {
     let password = document.querySelector("#password").value
     let user = users.find((user) => user.username === username && user.password === password)
     if (user === undefined) {
-        let loginForm = document.querySelector("#loginForm")
-        loginForm.innerHTML +=` <p class="text-red"> Login ou senha Errado</p>`
-                let body = document.querySelector("body")
-        setTimeout(function() {
-        body.innerHTML =``
-        body.style.backgroundColor = 'red'
-            alert("DEU MUITO ERRADO!");
-            }, 300)
     }
-    return
-    window.location.href="./list.html"
+    return window.location.href="../AULA-24-09/list.html"
 }

@@ -70,18 +70,123 @@ const pasteis = [
     tamanho: "Médio"
   }
 ];
-// function products() {
-//     let body = document.querySelector("body")
-//     let tbody = document.querySelector("tbody")
-//     for (let index = 0; index < pasteis.length; index++) {
-//         let tr = document.createElement("tr")
-//         tr.innerHTML = `
-//         <td> ${pasteis[index].id}</td>
-//         <td> ${pasteis[index].nome}</td>
-//         <td> ${pasteis[index].preco}</td>
-//         <td> ${pasteis[index].ingredientes}</td>
-//         `
-//         tbody.appendChild(tr)
-//     }
+
+let body = document.querySelector("body")
+
+function products() {
+    
+    let tbody = document.querySelector("tbody")
+    for (let index = 0; index < pasteis.length; index++) {
+        let tr = document.createElement("tr")
+        tr.innerHTML = `
+        <td> ${pasteis[index].id}</td>
+        <td> ${pasteis[index].nome}</td>
+        <td> ${pasteis[index].preco}</td>
+        <td> ${pasteis[index].ingredientes}</td>
+        <td>
+          <button class="btn btn-warning" onclick="edit()">Editar</button>
+          <button class=" btn btn-danger" onclick="deletarPasteis(${pasteis[index].id})">Excluir</button>
+        </td>
+        `
+        tbody.appendChild(tr)
+    }
+  }
 
 products()
+
+function renderModal() {
+  let div = document.createElement("div")
+  div.classList.add("modal-overlay")
+  div.innerHTML= `
+  
+  <div id="createModal" class="modal-content" >
+    <form>
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digite seu Id" aria-label="Username" aria-describedby="basic-addon1" id="inputId">
+     </div>
+
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digite Nome" aria-label="Username" aria-describedby="basic-addon1" id="inputNome">
+     </div>     
+     
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digite Preço" aria-label="Username" aria-describedby="basic-addon1" id="inputPreco">
+         </div>
+
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digites Ingredientes" aria-label="Username" aria-describedby="basic-addon1" id="inputIngrediente">
+     </div>
+    
+      <div id="div-buttons">
+        <button type="button" onclick="fechar()" class="btn btn-secondary">Fechar</button>
+        <button type="button" onclick="adicionar()" class="btn btn-primary">Adicionar</button>
+
+      </div>
+
+     </div>
+    </form>
+
+      
+
+  </div>
+
+  `
+  body.appendChild(div)
+}
+
+function fechar() {
+  let createModal = document.querySelector(".modal-overlay")
+  body.removeChild(createModal)
+}
+function adicionar() {
+  let id = document.querySelector("#inputId").value
+  let nome = document.querySelector("#inputNome").value
+  let preco = document.querySelector("#inputPreco").value
+  let ingrediente = document.querySelector("#inputIngrediente").value
+  let tbody =document.querySelector("tbody")
+
+  pasteis.push({
+    id:id,
+    nome:nome,
+    preco:preco,
+    ingredientes:ingrediente
+
+  })
+  fechar()
+  tbody.innerHTML =""
+  products()
+
+}
+
+function edit() {
+
+
+
+  let id = document.querySelector("#inputId").value
+  let nome = document.querySelector("#inputNome").value
+  let preco = document.querySelector("#inputPreco").value
+  let ingrediente = document.querySelector("#inputIngrediente").value
+  let tbody =document.querySelector("tbody")
+
+  pasteis.push({
+    id:id,
+    nome:nome,
+    preco:preco,
+    ingredientes:ingrediente
+
+  })
+  fechar()
+  tbody.innerHTML =""
+  products()
+
+
+}
+
+function deletarPasteis(id) {
+  let tbody =document.querySelector("tbody")
+  let pastel = pasteis.find((pastel) => pastel.id === id)
+  pasteis.splice(pastel, 1)
+  tbody.innerHTML = ""
+  products()
+
+}
