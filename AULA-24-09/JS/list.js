@@ -84,7 +84,7 @@ function products() {
         <td> ${pasteis[index].preco}</td>
         <td> ${pasteis[index].ingredientes}</td>
         <td>
-          <button class="btn btn-warning">Editar</button>
+          <button class="btn btn-warning" onclick="edit()">Editar</button>
           <button class=" btn btn-danger">Excluir</button>
         </td>
         `
@@ -155,5 +155,29 @@ function adicionar() {
   fechar()
   tbody.innerHTML =""
   products()
+
+}
+
+function edit() {
+
+
+  
+  let id = document.querySelector("#inputId").value
+  let nome = document.querySelector("#inputNome").value
+  let preco = document.querySelector("#inputPreco").value
+  let ingrediente = document.querySelector("#inputIngrediente").value
+  let tbody =document.querySelector("tbody")
+
+  pasteis.push({
+    id:id,
+    nome:nome,
+    preco:preco,
+    ingredientes:ingrediente
+
+  })
+  fechar()
+  tbody.innerHTML =""
+  products()
+
 
 }
