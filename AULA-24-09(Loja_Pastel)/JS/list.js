@@ -1,4 +1,4 @@
-const pasteis = [
+const pasteis = JSON.parse(localStorage.getItem("Pasteis")) || [
   {
     id: 1,
     nome: "Pastel de Palmito",
@@ -71,7 +71,13 @@ const pasteis = [
   }
 ];
 
+function saveLocalStorage() {
+  localStorage.setItem("Pasteis", JSON.stringify(pasteis))
+}
+saveLocalStorage()
+
 let body = document.querySelector("body")
+let tbody = document.querySelector("tbody")
 
 function products() {
     
@@ -84,7 +90,7 @@ function products() {
         <td> ${pasteis[index].preco}</td>
         <td> ${pasteis[index].ingredientes}</td>
         <td>
-          <button class="btn btn-warning" onclick="edit()">Editar</button>
+          <button class="btn btn-warning" onclick="edit(${pasteis[index].id})">Editar</button>
           <button class=" btn btn-danger" onclick="deletarPasteis(${pasteis[index].id})">Excluir</button>
         </td>
         `
@@ -101,9 +107,6 @@ function renderModal() {
   
   <div id="createModal" class="modal-content" >
     <form>
-     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Digite seu Id" aria-label="Username" aria-describedby="basic-addon1" id="inputId">
-     </div>
 
      <div class="form-group">
         <input type="text" class="form-control" placeholder="Digite Nome" aria-label="Username" aria-describedby="basic-addon1" id="inputNome">
@@ -126,8 +129,6 @@ function renderModal() {
      </div>
     </form>
 
-      
-
   </div>
 
   `
@@ -139,14 +140,19 @@ function fechar() {
   body.removeChild(createModal)
 }
 function adicionar() {
-  let id = document.querySelector("#inputId").value
   let nome = document.querySelector("#inputNome").value
   let preco = document.querySelector("#inputPreco").value
   let ingrediente = document.querySelector("#inputIngrediente").value
   let tbody =document.querySelector("tbody")
 
+  if(nome==="" || preco==="" || ingrediente===""){
+    createModal.innerHTML+=`
+    <p style="color:red"> Digite valores validos</p>`
+    return
+  }
+
   pasteis.push({
-    id:id,
+    id:pasteis.length+1,
     nome:nome,
     preco:preco,
     ingredientes:ingrediente
@@ -158,35 +164,68 @@ function adicionar() {
 
 }
 
-function edit() {
+function edit(id) {
+  let pastel = pasteis.find((pastel) => pastel.id === id)
+  let div = document.createElement("div")
+  div.classList.add("modal-overlay")
+  div.innerHTML= `
+  
+  <div id="createModal" class="modal-content" >
+    <form>
 
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digite Nome" aria-label="Username" aria-describedby="basic-addon1" id="editNome" value="${pastel.nome}">
+     </div>     
+     
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digite Preço" aria-label="Username" aria-describedby="basic-addon1" id="editPreco" value="${pastel.preco}">
+         </div>
 
+     <div class="form-group">
+        <input type="text" class="form-control" placeholder="Digites Ingredientes" aria-label="Username" aria-describedby="basic-addon1" id="editIngrediente" value="${pastel.ingredientes}">
+     </div>
+    
+      <div id="div-buttons">
+        <button type="button" onclick="fechar()" class="btn btn-secondary">Fechar</button>
+        <button type="button" onclick="salvarEdit(${id})" class="btn btn-primary">Salvar</button>
 
-  let id = document.querySelector("#inputId").value
-  let nome = document.querySelector("#inputNome").value
-  let preco = document.querySelector("#inputPreco").value
-  let ingrediente = document.querySelector("#inputIngrediente").value
-  let tbody =document.querySelector("tbody")
+      </div>
 
-  pasteis.push({
-    id:id,
+     </div>
+    </form>
+
+  </div>
+
+  `
+  body.appendChild(div)
+  
+}
+
+  function salvarEdit(id) {
+  let index = pasteis.findIndex((pastel) => pastel.id === id)
+  let nome = document.querySelector("#editNome").value
+  let preco = document.querySelector("#editPreco").value
+  let ingrediente = document.querySelector("#editIngrediente").value
+
+  pasteis[index] = {
+    id:pasteis[index].id,
     nome:nome,
     preco:preco,
     ingredientes:ingrediente
+  }
 
-  })
   fechar()
   tbody.innerHTML =""
   products()
+ }
 
-
-}
 
 function deletarPasteis(id) {
   let tbody =document.querySelector("tbody")
-  let pastel = pasteis.find((pastel) => pastel.id === id)
+  let pastel = pasteis.findIndex((pastel) => pastel.id === id)
   pasteis.splice(pastel, 1)
   tbody.innerHTML = ""
   products()
 
 }
+
