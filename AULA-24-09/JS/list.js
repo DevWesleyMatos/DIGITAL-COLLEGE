@@ -84,7 +84,7 @@ function products() {
         <td> ${pasteis[index].preco}</td>
         <td> ${pasteis[index].ingredientes}</td>
         <td>
-          <button class="btn btn-warning" onclick="edit()">Editar</button>
+          <button class="btn btn-warning" onclick="edit(${pasteis[index].id})">Editar</button>
           <button class=" btn btn-danger" onclick="deletarPasteis(${pasteis[index].id})">Excluir</button>
         </td>
         `
@@ -158,28 +158,40 @@ function adicionar() {
 
 }
 
-function edit() {
+function edit(id) {
+  let pastel = pasteis.find((pastel) => pastel.id === id);
+  console.log(pastel); 
+
+  renderModal(); // abre o modal
+
+  document.querySelector("#inputId").value = pastel.id;
+  document.querySelector("#inputNome").value = pastel.nome;
+  document.querySelector("#inputPreco").value = pastel.preco;
+  document.querySelector("#inputIngrediente").value = pastel.ingredientes;
+
+  
+  let btn = document.querySelector("#div-buttons button.btn-primary");
+  btn.innerHTML = "Salvar Alterações";
+  btn.setAttribute("onclick", `salvarAlteracoes(${id})`);
+}
+
+function salvarAlteracoes(id) {
+  let idEditado = document.querySelector("#inputId").value;
+  let nomeEditado = document.querySelector("#inputNome").value;
+  let precoEditado = document.querySelector("#inputPreco").value;
+  let ingredienteEditado = document.querySelector("#inputIngrediente").value;
+
+  let index = pasteis.find(p => p.id == id);
+
+  pasteis[index].id = idEditado;
+  pasteis[index].nome = nomeEditado;
+  pasteis[index].preco = precoEditado;
+  pasteis[index].ingredientes = ingredienteEditado;
 
 
-
-  let id = document.querySelector("#inputId").value
-  let nome = document.querySelector("#inputNome").value
-  let preco = document.querySelector("#inputPreco").value
-  let ingrediente = document.querySelector("#inputIngrediente").value
-  let tbody =document.querySelector("tbody")
-
-  pasteis.push({
-    id:id,
-    nome:nome,
-    preco:preco,
-    ingredientes:ingrediente
-
-  })
-  fechar()
-  tbody.innerHTML =""
-  products()
-
-
+  fechar();
+  document.querySelector("tbody").innerHTML = "";
+  products();
 }
 
 function deletarPasteis(id) {
