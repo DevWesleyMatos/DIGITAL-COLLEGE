@@ -144,5 +144,5 @@ function login() {
     let user = users.find((user) => user.username === username && user.password === password)
     if (user === undefined) {
     }
-    return window.location.href="../AULA-24-09/list.html"
+    return window.location.href="../AULA-24-09(Loja_Pastel)/list.html"
 }
