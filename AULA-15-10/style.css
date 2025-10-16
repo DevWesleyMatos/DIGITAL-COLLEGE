@@ -1,0 +1,21 @@
+#pasteis{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+    gap: 9vw;
+}
+#pasteis div{
+    width: 25vw;
+}
+.card{
+    height: 58vh;
+    width: 25vw;
+    margin-bottom: 10vh;
+}
+.card img{
+    height: 25vh;
+    width: 25vw;
+}
