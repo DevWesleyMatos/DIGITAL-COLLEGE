@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 5vw;
+    padding: 5vw;
+}
+.card{
+    width: 17vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vw;
+}
+.card img{
+    width: 5rem;
+}
+.card-title {
+  font-size: 0.7rem;
+  height: 4vw;
+}
