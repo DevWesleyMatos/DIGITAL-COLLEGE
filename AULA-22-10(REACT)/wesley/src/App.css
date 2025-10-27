@@ -106,3 +106,25 @@ cursor: pointer;
     border: darkgray 1px solid;
     margin: 0 5vw;
 }
+#carousel{
+    display: flex;
+    justify-content: space-around;
+}
+#carousel_Txt{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 30vw;
+}
+#carouselImg img{
+    width: 560px;
+}
+#oferta{
+    width: 15vw;
+    height: 6vh;
+    background-color: #c92071;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+}

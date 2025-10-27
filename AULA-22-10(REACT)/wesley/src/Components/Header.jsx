@@ -10,7 +10,7 @@ function Header() {
 
         <div id="input-container">
           <input type="text" placeholder="Pesquisar produtos..."/>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </div>
 
         <div id="cart-container">
@@ -18,7 +18,7 @@ function Header() {
             <a href="">Cadastre-se</a>
             <button>Entrar</button>
           </div>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i className="fa-solid fa-cart-shopping"></i>
         </div>
       </section>
     </>

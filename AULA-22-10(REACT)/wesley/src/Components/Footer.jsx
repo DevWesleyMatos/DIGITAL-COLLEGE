@@ -10,9 +10,9 @@ function Footer() {
                         <img src={logoFooter} alt="" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                         <div>
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-twitter"></i>
+                            <i className="fa-brands fa-facebook-f"></i>
+                            <i className="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-twitter"></i>
                         </div>
 
                     </div>
