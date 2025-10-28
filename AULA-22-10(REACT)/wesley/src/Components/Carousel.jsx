@@ -1,5 +1,6 @@
 import "../App.css"
 import tenisCarousel from "../assets/tenis.png";
+import ornament from "../assets/ornament.png"
 
 function Carousel() {
   return (
@@ -13,22 +14,23 @@ function Carousel() {
 
     <div id="carousel">
       <div id="carousel_Txt">
-        <p>Melhores ofertas personalizadas</p>
-        <h1>Queima de stoke Nike</h1>
+        <p id="textPersonal">Melhores ofertas personalizadas</p>
+        <h1 id="textEstoque">Queima de estoque Nike 🔥</h1>
         <p>Conseguir culpa exercitation mollit nisi excepteur do do tempo laboris elusmod irure consectetur.</p>
         <button id="oferta">Ver Ofertas</button>
       </div>
       <div id="carouselImg">
         <img src={tenisCarousel} alt="" />
+        <div id="img2">
+          <img src={ornament} alt=""  />
+        </div>
       </div>
     </div>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+   
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>

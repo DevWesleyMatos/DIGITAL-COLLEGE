@@ -1,10 +1,12 @@
 import "../App.css"
 import Logo from "../assets/Logo.png"
+import vector from "../assets/Vector.png"
 function Header() {
   return (
     <>
       <section id="header-container">
         <div id="logo-image">
+          <img src={vector} alt="" />
           <img src={Logo} alt="" />
         </div>
 
