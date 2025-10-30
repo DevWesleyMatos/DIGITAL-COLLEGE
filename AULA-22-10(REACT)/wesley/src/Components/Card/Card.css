@@ -1,0 +1,13 @@
+#Cards{  
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vw;
+    gap: 3vw;
+    background-color: #F6AA1C;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

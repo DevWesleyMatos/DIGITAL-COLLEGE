@@ -1,6 +1,6 @@
-import "../App.css"
-import Logo from "../assets/Logo.png"
-import vector from "../assets/Vector.png"
+import "./Header.css";
+import Logo from "../../assets/Logo.png"
+import vector from "../../assets/Vector.png"
 function Header() {
   return (
     <>

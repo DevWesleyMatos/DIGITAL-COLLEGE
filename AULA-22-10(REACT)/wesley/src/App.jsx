@@ -1,18 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Homepage from "./Pages/Homepage";
+import ProductsPages from "./Pages/ProductsPages";
 
-import Footer from "./Components/Footer"
-import Header from "./Components/Header"
-import Carousel from "./Components/Carousel"
-import Cards from "./Components/Cards"
 function App() {
   
   return (
     <>
-      <Header/>
-      <Carousel/>
-      <Cards/>
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/Products" element={<ProductsPages/>} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 
 }
 
