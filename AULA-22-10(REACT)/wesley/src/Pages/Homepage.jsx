@@ -2,6 +2,7 @@ import Header from "../Components/Header/Header"
 import Carousel from "../Components/Carousel/Carousel"
 import Card from "../Components/Card/Cards"
 import Footer from "../Components/Footer/Footer";
+import CardDestaque from "../Components/CardDestaque/CardDestaque";
 
 function Homepage() {
   
@@ -9,6 +10,7 @@ function Homepage() {
     <>
           <Header />
           <Carousel />
+          <CardDestaque/>
           <Card />
           <Footer/>
     </>

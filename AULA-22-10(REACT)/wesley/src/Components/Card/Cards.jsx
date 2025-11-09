@@ -2,27 +2,27 @@ import { useState, useEffect } from "react";
 import "./card.css";
 
 function GetData() {
-  const [repositories, setRepositories] = useState([]);
+  const [sapatos, setSapatos] = useState([]);
 
   useEffect(() => {
-    const buscarRepositorios = async () => {
-      const response = await fetch("https://rickandmortyapi.com/api/character");
+    const buscarSapatos = async () => {
+      const response = await fetch("http://localhost:8080/sapatos");
       const data = await response.json();
-      setRepositories(data.results);
+      setSapatos(data);
     };
 
-    buscarRepositorios();
+    buscarSapatos();
   }, []);
 
  return (
    <>
      <section id="Cards">
-       {repositories.map((item) => (
+       {sapatos.map((item) => (
            <div className="card">
              <img src={item.image} alt="..." />
              <div className="card-body">
                <h5 className="card-title">{item.name}</h5>
-               <p className="card-text"></p>
+               <p className="card-text">{item.modelo}</p>
                <a href="#" className="btn btn-primary">
                  Go somewhere
                </a>
