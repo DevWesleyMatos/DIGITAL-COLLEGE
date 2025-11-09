@@ -21,6 +21,10 @@
     width: 25vw;
     gap: 4vh;
 }
+#footer-socialmedia{
+    display: flex;
+    gap: 1vw;
+}
 
 #footer-info {
     display: flex;
