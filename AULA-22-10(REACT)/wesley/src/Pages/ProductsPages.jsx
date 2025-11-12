@@ -6,7 +6,7 @@ function ProductsPages() {
   return (
     <>
       <Header />
-      <CreateProduct/>
+      <CreateProduct />
       <Footer />
     </>
   );

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./card.css";
+import "./Card.css";
 
 function GetData() {
   const [sapatos, setSapatos] = useState([]);
